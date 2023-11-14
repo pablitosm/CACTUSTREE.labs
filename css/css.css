@@ -22,11 +22,13 @@ body {
 }
 
 .textLogo {
-	font-size: 2vw;
+	/* font-size: 2vw; */
+	font-size: 4vw;
 }
 
 .mail {
-	font-size: 0.7vw;
+	/* font-size: 0.7vw; */
+	font-size: 1.4vw;
 }
 
 .centered-text {
@@ -71,6 +73,11 @@ body {
 	mix-blend-mode: difference;
 	pointer-events: none;
 	transition: width 0.5s, height 0.5s;
+}
+
+.inner-cursor, .outer-cursor, .custom-text {
+    position: fixed;
+    z-index: 9999;
 }
 
 .outer-cursor {
@@ -166,3 +173,4 @@ body {
     transform: translateY(-100%);
     pointer-events: none; /* Deshabilita los eventos del mouse durante el desplazamiento */
 }
+
