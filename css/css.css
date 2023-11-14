@@ -1,0 +1,168 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: url("../img/fondo.jpeg");
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	cursor: none;
+}
+
+.textLogo,
+.mail {
+	font-family: "NT Wagner", Arial, Helvetica, sans-serif;
+	color: #aee4b2;
+	text-align: center;
+}
+
+.textLogo {
+	font-size: 2vw;
+}
+
+.mail {
+	font-size: 0.7vw;
+}
+
+.centered-text {
+	text-align: center;
+	color: white;
+	font-size: 2vw;
+} 
+
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+#video-fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.inner-cursor {
+	position:fixed;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor {
+	position: fixed;
+	left: 10px;
+	width: 25px;
+	height: 25px;
+	transform: translate(-50%, -50%);
+	border: 1px solid #fff;
+	mix-blend-mode: difference;
+	pointer-events: none;
+	transition: 0.1s;
+}
+
+/* .custom-text {
+    position: absolute;
+    font-size: 14px;
+    pointer-events: none;
+	transform: translate(-50%, -50%);
+	mix-blend-mode: difference;
+	pointer-events: none;
+	transition: width 1s, height 1s;
+	font-family: "NT Wagner", Arial, Helvetica, sans-serif;
+} */
+
+/* .intro {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #161616;
+	transition: 1s;
+} */
+
+.logo {
+	height: 3vw;
+	width: 3vw;
+	position: fixed;
+    top: 0.3vw;
+    right: 0.3vw;
+	user-select: none;
+	pointer-events: none;
+}
+
+.splash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #161616;
+	z-index: 200;
+	color: white;
+	text-align: center;
+	line-height: 90vh;
+	transition: transform 0.5s ease-in-out;
+}
+
+.splash.display-none {
+	position: fixed;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #161616;
+	z-index: -10;
+	color: white;
+	text-align: center;
+	line-height: 90vh;
+	transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+
+.splash.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Deshabilita los eventos del mouse durante el desvanecimiento */
+}
+
+.fade-in {
+	opacity: 0;
+	animation: fadeIn 1s ease-in forwards;
+}
+
+.slide-up {
+    transform: translateY(-100%);
+    pointer-events: none; /* Deshabilita los eventos del mouse durante el desplazamiento */
+}

@@ -1,0 +1,37 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../img/d_1.10.1.JPG");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    cursor: url('../img/cursor.png'), auto;
+
+}
+
+.textLogo,
+.mail {
+    font-family: "NT Wagner", Arial, Helvetica, sans-serif;
+    color: #aee4b2;
+    text-align: center;
+}
+
+.textLogo {
+    font-size: 2vw;
+}
+
+.mail {
+    font-size: 0.7vw;
+}
+
+.centered-text {
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+} */
