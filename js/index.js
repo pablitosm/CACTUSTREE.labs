@@ -1,3 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var links = document.querySelectorAll('nav ul li a');
+
+    links.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
 document.addEventListener('DOMContentLoaded', (e) => {
     const splash = document.querySelector('.splash');
 
@@ -16,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let innerCursor = document.querySelector(".inner-cursor");
     let outerCursor = document.querySelector(".outer-cursor");
     let textElement = document.querySelector(".custom-text");
-    let contenidoDiv = document.getElementById("contenido");
+    let contenidoDiv1 = document.getElementById("contenido1");
 
     document.addEventListener("mousemove", moveCursor);
 
@@ -28,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         innerCursor.style.top = `${y}px`;
 
         // Verificar si el cursor está sobre el área de "contenido"
-        if (isCursorOverElement(e, contenidoDiv)) {
+        if (isCursorOverElement(e, contenidoDiv1)) {
             // Si el cursor está dentro del área de contenido, ocultar el custom-text
             textElement.style.display = "none";
             outerCursor.style.left = `${x}px`;
