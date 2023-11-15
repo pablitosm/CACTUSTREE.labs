@@ -1,21 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var links = document.querySelectorAll('nav ul li a');
+// document.addEventListener('DOMContentLoaded', function() {
+//     var links = document.querySelectorAll('nav ul li a');
 
-    links.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+//     links.forEach(function(link) {
+//         link.addEventListener('click', function(e) {
+//             e.preventDefault();
 
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
+//             var targetId = this.getAttribute('href').substring(1);
+//             var targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
+//             if (targetElement) {
+//                 targetElement.scrollIntoView({
+//                     behavior: 'smooth'
+//                 });
+//             }
+//         });
+//     });
+// });
+
+window.onload = function() {
+    // Hace scroll a la parte superior de la página al cargar
+    window.scrollTo(0, 0);
+};
 
 document.addEventListener('DOMContentLoaded', (e) => {
     const splash = document.querySelector('.splash');
@@ -27,8 +32,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
         // Elimina el elemento después de que termine la animación de desplazamiento
         setTimeout(() => {
             splash.remove();
-        }, 500); // El mismo tiempo que la duración de la transición en el CSS
-    }, 2000);
+        }, 1000); // El mismo tiempo que la duración de la transición en el CSS
+    }, 5000);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
