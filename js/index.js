@@ -1,22 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     var links = document.querySelectorAll('nav ul li a');
-
-//     links.forEach(function(link) {
-//         link.addEventListener('click', function(e) {
-//             e.preventDefault();
-
-//             var targetId = this.getAttribute('href').substring(1);
-//             var targetElement = document.getElementById(targetId);
-
-//             if (targetElement) {
-//                 targetElement.scrollIntoView({
-//                     behavior: 'smooth'
-//                 });
-//             }
-//         });
-//     });
-// });
-
 window.onload = function() {
     // Hace scroll a la parte superior de la página al cargar
     window.scrollTo(0, 0);

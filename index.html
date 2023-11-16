@@ -4,348 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./css/css.css"> -->
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.cdnfonts.com/css/nt-wagner" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="icon" href="../img/favicon.png" type="image/png" sizes="200x200">
     <script src="./js/index.js"></script>
     <title>CACTUSTREE.labs</title>
 	<style>
-		html {
-			scroll-behavior: smooth;
-		}
-		
-		* {
-			font-family: "NT Wagner", Arial, Helvetica, sans-serif;
-			box-sizing: border-box;
-		}
-		
-		
-		.splash-container {
-			position: relative;
-			height: 100vh;
-		}
-		
-		.splash {
-			/* overflow: hidden; */
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100vh;
-			background-color: #161616;
-			z-index: 200;
-			color: white;
-			text-align: center;
-			line-height: 90vh;
-			transition: transform 1s ease-in-out;
-		}
-		
-		.splash.hide {
-			transform: translateY(-100%);
-		}
-		
-		header {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			padding: 10px 0;
-			z-index: 100;
-		}
-		
-		nav {
-			text-align: left;
-			margin-top: 10px;
-			margin-left: 20px;
-		}
-		
-		nav ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			display: flex;
-			/* justify-content: space-between; */
-		}
-		
-		nav ul li {
-			/* flex: 1; /* Cada elemento ocupa el 25% del ancho */
-			margin-left: 10px;
-		}
-		
-		nav ul li a {
-			text-decoration: none;
-			color: #fff;
-			font-size: 1vw;
-			transition: color 0.3s, font-size 0.3s; /* Transición de 0.3 segundos en color y tamaño de fuente */
-		}
-		
-		nav ul li a:hover {
-			text-decoration: none;
-			color: #aee4b2;
-			font-size: 1.2vw; /* Tamaño de fuente aumentado al hacer hover */
-		}
-		
-		body {
-			margin: 0;
-			padding: 0;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			cursor: none;
-			/* background-color: red; */
-			/* background-image: url("../img/fondo.jpeg"); */
-			
-		}
-		
-		
-		.textLogo,
-		.mail {
-			font-family: "NT Wagner", Arial, Helvetica, sans-serif;
-			color: #aee4b2;
-			/* text-align: center; */
-		}
-		
-		.textLogo {
-			font-size: 2vw;
-			/* font-size: 4vw; */
-		}
 				
-		.textApartados {
-			font-size: 8vw;
-			color: #f7e507;
-			/* font-size: 4vw; */
-		}
-		
-		.mail {
-			/* margin-top: -200px; */
-			font-size: 0.7vw;
-			/* font-size: 1.4vw; */
-		}
-		
-		.centered-text {
-			margin-top: 36vh;
-			text-align: center;
-			color: white;
-			/* font-size: 2vw; */
-		} 
-		
-		#video-container {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			z-index: -1; 
-		}
-		
-		#video-fondo {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-		
-		#contenido {
-			width: 100%;
-			height: 100vh;
-			position: absolute;
-			top: 40%;
-			left: 50%;
-			margin-top: 10vh;
-			transform: translate(-50%, -50%);
-			color: white;
-			text-align: center;
-			z-index: 1;
-			background-image: url(../img/fondo.jpeg);
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-		}
-		
-		.inner-cursor {
-			position:fixed;
-			left: 10px;
-			width: 10px;
-			height: 10px;
-			transform: translate(-50%, -50%);
-			background-color: #fff;
-			mix-blend-mode: difference;
-			pointer-events: none;
-			transition: width 0.5s, height 0.5s;
-		}
-		
-		.inner-cursor, .outer-cursor, .custom-text {
-			position: fixed;
-			z-index: 9999;
-		}
-		
-		.outer-cursor {
-			position: fixed;
-			left: 10px;
-			width: 25px;
-			height: 25px;
-			transform: translate(-50%, -50%);
-			border: 1px solid #fff;
-			mix-blend-mode: difference;
-			pointer-events: none;
-			transition: 0.1s;
-			z-index: 10000; /* Ajustar el valor según sea necesario */
-		}
-		
-		
-		.logo {
-			height: 3vw;
-			width: 3vw;
-			position: fixed;
-			top: 0.3vw;
-			right: 0.3vw;
-			user-select: none;
-			pointer-events: none;
-		}
-		
-		
-		.splash.display-none {
-			position: fixed;
-			opacity: 0;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100vh;
-			background-color: #161616;
-			z-index: -10;
-			color: white;
-			text-align: center;
-			line-height: 90vh;
-			transition: all 1s;
-		}
-		
-		@keyframes fadeIn {
-			to {
-				opacity: 1;
-			}
-		}
-		
-		.splash.fade-out {
-			opacity: 0;
-			pointer-events: none; /* Deshabilita los eventos del mouse durante el desvanecimiento */
-		}
-		
-		.fade-in {
-			opacity: 0;
-			animation: fadeIn 1s ease-in forwards;
-			font-family: "NT Wagner", Arial, Helvetica, sans-serif;
-		}
-		
-		.slide-up {
-			transform: translateY(-100%);
-			pointer-events: none; /* Deshabilita los eventos del mouse durante el desplazamiento */
-		}
-		
-		.separator {
-			background-color: white;
-			width: 100%;
-			height: 15vw;
-		}
-		
-		.title {
-			color: white;
-			text-align: center;
-			font-size: 2rem; /* Tamaño del título */
-			margin: 0; /* Elimina el margen predeterminado del título */
-		}
-		
-		.primeraImagen,
-		.segundaImagen,
-		.terceraImagen,
-		.cuartaImagen,
-		.quintaImagen,
-		.sextaImagen {
-			background-color: black;
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-			/* background-attachment: fixed; */
-			width: 100%;
-			height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-		}
-		
-		.primeraImagen {
-			background-image: url("../img/fondo.jpeg");
-		}
-		
-		.segundaImagen {
-			background-image: url("../img/arturo.jpg");
-		}
-		
-		.terceraImagen {
-			background-image: url("../img/arturo2.jpg");
-		}
-		
-		.cuartaImagen {
-			background-image: url("../img/fondo.jpeg");
-		}
-		
-		.quintaImagen {
-			background-image: url("../img/locurote.jpg");
-		}
-		
-		.sextaImagen {
-			background-image: url("../img/dientes.jpeg");
-		}
-		
-		.custom-text {
-			position: absolute;
-			font-size: 14px;
-			margin-top: -10px;
-			pointer-events: none;
-			transform: translate(-50%, -50%);
-			mix-blend-mode: difference;
-			pointer-events: none;
-			transition: width 1s, height 1s;
-			font-family: "NT Wagner", Arial, Helvetica, sans-serif;
-		}
-		
-		header img.logo {
-			height: 3vw;
-			width: 3vw;
-			user-select: none;
-			pointer-events: none;
-		}
-		
-		/* header {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background-color: #161616;
-			padding: 10px 0;
-			z-index: 1000;
-		} */
-		/* 
-		nav {
-			text-align: center;
-			margin-top: 10px;
-		} */
-		/* 
-		nav {
-			text-align: center;
-			position: fixed;
-			width: 100%;
-			z-index: 100; 
-		} */
-		
-		/* .intro {
-			position: fixed;
-			z-index: 1;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100vh;
-			background-color: #161616;
-			transition: 1s;
-		} */
-		
-		
 	</style>
 </head>
 
@@ -353,7 +19,7 @@
     <div class="splash-container">
         <div class="splash">
 			<!-- <h2 class="fade-in">"aqui poner animacion logo o lo que pollas sea"</h2> -->
-			<video src="./media/ANIMACION.mp4" class="fade-in" autoplay muted loop id="video-fondo">
+			<video src="./media/ANIMACION.mp4" class="fade-in" autoplay muted loop playsinline id="video-fondo">
 				Tu navegador no soporta el elemento de video.
 			</video>
 
@@ -361,7 +27,7 @@
     </div>
 
     <header>
-		<img class="logo"src="./img/logo.png" alt="">
+		<img class="logo"src="./img/principal/logo.png" alt="">
         <div id="contenido1">
 				<nav>
 					<ul>
@@ -369,7 +35,7 @@
 						<li><a href="#projects">PROJECTS</a></li>
 						<li><a href="#moments">MOMENTS</a></li>
 						<li><a href="#art">ART</a></li>
-						<li><a href="#contacto">CONTACTO</a></li>
+						<li><a href="#contacto">CONTACT</a></li>
 					</ul>
 				</nav>
         </div>
@@ -412,7 +78,7 @@
 		<!-- <div class="centered-text">
 			<h2 class="textApartados">momentos</h2>
 		</div> -->
-		<video class="fade-in" autoplay muted loop id="video-fondo">
+		<video class="fade-in" autoplay muted loop playsinline id="video-fondo">
 			<source src="./media/videoplayback.mp4" type="video/mp4">
 			Tu navegador no soporta el elemento de video.
 		</video>
@@ -429,9 +95,33 @@
     </div>
 
 	<div class="contacto sextaImagen" id="contacto">
-		<div class="centered-text">
-			<h2 class="textApartados">apartado "contacto"</h2>
+		<div class="centered-text1">
+			<!-- <h2 class="textApartados">apartado "contacto"</h2> -->
+			<div class="contactoArriba">
+				<p>Si quieres recibir información de cuando saldrá el próximo "ITEM"</p>
+				<p>info@cactustreelabs.com no va el correo pero pongo por poner</p>
+				<hr>
+			</div>
 		</div>
+		<div class="contactoAbajo">
+			<div class="pequegnito">
+				<p>Si tienes dudas o quieres hacer un presupuesto no dudes en contactar</p>
+				<p><img src="./img/contact/correo.png" alt="Correo Icono" class="icono-correo"> info@cactustreelabs.com</p>
+				<p><img src="./img/contact/llamada-telefonica.png" alt="Llamada telefonica Icono" class="llamada-correo">+34 692 94 81 26</p>
+			</div>
+		</div>
+<!-- 
+		<div class="redesSociales">
+			<a class="logoInstagram" href="https://www.instagram.com/cactustree.labs/" target="_blank">
+				<img src="./img/instagramNegro.png" alt="">
+			</a>
+			<a class="logoGmail" href="mailto:info@cactustreelabs.com">
+				<img src="./img/gmail.png" alt="">
+			</a>			
+			<a class="logoVimeo" href="https://vimeo.com/user201951037" target="_blank">
+				<img src="./img/vimeo.png" alt="">
+			</a>
+		</div> -->
     </div>
 
     <div class="inner-cursor"></div>
