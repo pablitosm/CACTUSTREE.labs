@@ -109,3 +109,61 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    var menuItems = document.querySelectorAll("nav ul li");
+
+    menuItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+            // Remover la clase 'active' de todos los elementos del menú
+            menuItems.forEach(function (menuItem) {
+                menuItem.classList.remove("active");
+            });
+
+            // Agregar la clase 'active' al elemento clicado
+            item.classList.add("active");
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    var menuItems = document.querySelectorAll("nav ul li a");
+
+    function updateActiveMenuItem() {
+        var scrollPosition = window.scrollY;
+
+        menuItems.forEach(function (menuItem) {
+            var targetId = menuItem.getAttribute("href").substring(1);
+            var targetSection = document.getElementById(targetId);
+
+            if (
+                targetSection.offsetTop <= scrollPosition &&
+                targetSection.offsetTop + targetSection.offsetHeight > scrollPosition
+            ) {
+                // Agregar la clase 'active' al elemento del menú correspondiente
+                menuItem.parentElement.classList.add("active");
+            } else {
+                // Remover la clase 'active' si la sección ya no está visible
+                menuItem.parentElement.classList.remove("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", updateActiveMenuItem);
+    window.addEventListener("load", updateActiveMenuItem);
+
+    // Para solucionar el problema de Contacto
+    // Agregamos un evento al hacer clic en el enlace para desplazar suavemente a la sección
+    menuItems.forEach(function (menuItem) {
+        menuItem.addEventListener("click", function (event) {
+            event.preventDefault();
+            var targetId = menuItem.getAttribute("href").substring(1);
+            var targetSection = document.getElementById(targetId);
+
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
