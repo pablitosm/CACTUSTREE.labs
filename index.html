@@ -4,20 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
     <link href="https://fonts.cdnfonts.com/css/nt-wagner" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="../img/favicon.png" type="image/png" sizes="200x200">
-    <script src="index.js"></script>
     <title>CACTUSTREE.labs</title>
-	<style>
-	
-	
-	</style>
 </head>
 
 <body>
@@ -46,50 +41,62 @@
         </div>
     </header>
 		
-	</div>
-
 	<div id="contenido">
 		<div class="centered-text">
 			<h1 class="textLogo">CACTUSTREE.labs&#8482;</h1>
 			<h2 class="mail">info@cactustreelabs.com</h2>
 		</div>
 	</div>
-	<!-- DIV PROYECTOS -->
-		<div class="about segundaImagen" id="about">
-			<div class="aboutArriba">
-				<p><cite>"CACTUSTREE.labs&#8482;</cite> blends a passion for videos and storytelling with artful experimentation. Each frame tells a story, and every video is a chance 
-					to share genuine and authentic emotions.The purpose of this company is to try to expand our creative side and do what we want, as if nobody is going 
-					to stop us. Here, we strive to create cool and authentic pieces that you can enjoy forever."</p>
-			</div>
-			<div class="aboutAbajo">
-				<p>"The founder of <cite>CACTUSTREE.labs&#8482;</cite> is Arturo Martin Polo, a passionate young man in the audiovisual world. He has worked in France for a production 
-					company and has completed various projects independently. Through images and sounds, he believes in evoking a myriad of emotions in the audience."</p>
-				<img class="imgAbout" src="./img/about/fotoCerca.png">
-			</div>
-		</div>
 
+	<div class="container">
+		<div class="navbar">
+			<ul>
+				<li class="active"><a href="#about" data-section-name="ABOUT"></a><div class="section-name">Acerca</div></li>
+				<li><a href="#projects" data-section-name="PROJECTS"></a><div class="section-name">Proyectos</div></li>
+				<li><a href="#moments" data-section-name="MOMENTS"></a><div class="section-name">Momentos</div></li>
+				<li><a href="#art" data-section-name="ART"></a><div class="section-name">Arte</div></li>
+				<li><a href="#contacto" data-section-name="CONTACT"></a><div class="section-name">Contacto</div></li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<div class="about segundaImagen" id="about">
 		
+		<div class="aboutArriba">
+			<p><cite>"CACTUSTREE.labs&#8482;</cite> blends a passion for videos and storytelling with artful experimentation. Each frame tells a story, and every video is a chance 
+				to share genuine and authentic emotions.The purpose of this company is to try to expand our creative side and do what we want, as if nobody is going 
+				to stop us. Here, we strive to create cool and authentic pieces that you can enjoy forever."</p>
+		</div>
+		<div class="aboutAbajo">
+			<p>"The founder of <cite>CACTUSTREE.labs&#8482;</cite> is Arturo Martin Polo, a passionate young man in the audiovisual world. He has worked in France for a production 
+				company and has completed various projects independently. Through images and sounds, he believes in evoking a myriad of emotions in the audience."</p>
+			<img class="imgAbout" src="./img/about/fotoCerca.png">
+		</div>
+	</div>
+	<!-- DIV PROYECTOS -->
+
 	<div class="projects terceraImagen" id="projects">
 		<div class="centered-text">
 			<h2 class="textApartados">apartado "proyectos"</h2>
 		</div>
 	</div>
-	
+
 	<div class="moments cuartaImagen" id="moments">
 		<!-- <div class="centered-text">
 			<h2 class="textApartados">momentos</h2>
 		</div> -->
-		<video class="fade-in" autoplay muted loop playsinline id="video-fondo">
+		<!-- <video class="fade-in" autoplay muted loop playsinline id="video-fondo">
 			<source src="./media/videoplayback.mp4" type="video/mp4">
 			Tu navegador no soporta el elemento de video.
-		</video>
-    </div>
+		</video> -->
+	</div>
 
 	<div class="art quintaImagen" id="art">
 		<div class="centered-text">
 			<h2 class="textApartados">apartado "art"</h2>
 		</div>
-    </div>
+	</div>
 
 	<div class="contacto sextaImagen" id="contacto">
 		<div class="centered-text1">
@@ -119,7 +126,8 @@
 				<img src="./img/vimeo.png" alt="">
 			</a>
 		</div> -->
-    </div>
+	</div>
+
 
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
@@ -129,5 +137,10 @@
         <!-- ... Contenido de tu footer actual ... -->
     </footer>	
 
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="./js/index.js"></script>
+	<!-- <script src="index.js"></script> -->
+
+	
 </body>
 </html>
