@@ -14,10 +14,84 @@ document.addEventListener('DOMContentLoaded', (e) => {
         setTimeout(() => {
             splash.remove();
         }, 1000); // El mismo tiempo que la duración de la transición en el CSS
-    }, 5000);
+    }, 100);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    var menuItems = document.querySelectorAll("nav ul li");
+
+    menuItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+            // Remover la clase 'active' de todos los elementos del menú
+            menuItems.forEach(function (menuItem) {
+                menuItem.classList.remove("active");
+            });
+
+            // Agregar la clase 'active' al elemento clicado
+            item.classList.add("active");
+        });
+    });
+
+
+    document.addEventListener('scroll', () => {
+
+        
+
+    // Obtén la posición del scroll actual
+    const scrollPosition = window.scrollY;
+
+    // Definir los límites de cada sección
+    const aboutSection = document.getElementById('about').offsetTop;
+    const projectsSection = document.getElementById('projects').offsetTop;
+    const momentsSection = document.getElementById('moments').offsetTop;
+    const artSection = document.getElementById('art').offsetTop;
+    const contactoSection = document.getElementById('contacto').offsetTop;
+
+    // Obtén el elemento de navegación
+    const navbar = document.querySelector('.navbar');
+
+    // Remueve la clase 'active' de todos los elementos de navegación
+    document.querySelectorAll('.navbar a').forEach(el => el.classList.remove('active'));
+
+    let activeLink;
+
+    // Determina la sección actual y agrega la clase 'active' al enlace correspondiente
+    if (scrollPosition < aboutSection) {
+        activeLink = navbar.querySelector('a[href="#about"]');
+        activeLink.classList.add('active');
+    } else if (scrollPosition < projectsSection) {
+        activeLink = navbar.querySelector('a[href="#projects"]');
+        activeLink.classList.add('active');
+    } else if (scrollPosition < momentsSection) {
+        activeLink = navbar.querySelector('a[href="#moments"]');
+        activeLink.classList.add('active');
+    } else if (scrollPosition < artSection) {
+        activeLink = navbar.querySelector('a[href="#art"]');
+        activeLink.classList.add('active');
+    } else {
+        activeLink = navbar.querySelector('a[href="#contacto"]');
+        activeLink.classList.add('active');
+    }
+
+    // Actualiza el contenido del contenedor de la sección activa
+    updateSectionName(activeLink);
+    });
+
+    // Función para actualizar el contenido del contenedor de la sección activa
+    function updateSectionName() {
+        const activeLink = document.querySelector('.navbar a.active');
+        const sectionNameContainer = document.querySelector('.section-name');
+    
+        if (activeLink && sectionNameContainer) {
+            // Obtén el nombre de la sección desde el atributo 'data-section-name'
+            const sectionName = activeLink.getAttribute('data-section-name');
+            
+            // Establece el contenido del contenedor de la sección activa
+            sectionNameContainer.innerHTML = sectionName;
+        }
+    }
+    
+
     let innerCursor = document.querySelector(".inner-cursor");
     let outerCursor = document.querySelector(".outer-cursor");
     let textElement = document.querySelector(".custom-text");
@@ -110,22 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    var menuItems = document.querySelectorAll("nav ul li");
-
-    menuItems.forEach(function (item) {
-        item.addEventListener("click", function () {
-            // Remover la clase 'active' de todos los elementos del menú
-            menuItems.forEach(function (menuItem) {
-                menuItem.classList.remove("active");
-            });
-
-            // Agregar la clase 'active' al elemento clicado
-            item.classList.add("active");
-        });
-    });
-});
-
 // document.addEventListener("DOMContentLoaded", function () {
 //     var menuItems = document.querySelectorAll("nav ul li a");
 
@@ -168,17 +226,16 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 // });
 
-// listen for clicks on the navbar
+// Escucha clics en el menú de navegación
 document.querySelector('.navbar').addEventListener('click', (e) => {
-
-    // ignore it if the click isn't on an anchor element
-      if (e.target.tagName.toLowerCase() === 'a') {
-    
-      // remove the 'active' class from all of the nav anchors
-        document.querySelectorAll('.navbar a')
-        .forEach(e => e.classList.remove('active'));
-        
-      // add the 'active' class to the clicked element
+    // Ignora si el clic no es en un elemento de ancla
+    if (e.target.tagName.toLowerCase() === 'a') {
+        // Remueve la clase 'active' de todos los elementos de navegación
+        document.querySelectorAll('.navbar a').forEach(el => el.classList.remove('active'));
+        // Agrega la clase 'active' al elemento clickeado
         e.target.classList.add('active');
+
+        updateSectionName();
     }
-  });
+});
+

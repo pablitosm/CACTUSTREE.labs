@@ -212,6 +212,13 @@ body {
     background-position: center;
 }
 
+#contenido1 {
+    /* position: fixed; */
+    top: 0;
+    width: 100%;
+    /* z-index: 1000;  */
+}
+
 .inner-cursor {
     position:fixed;
     left: 10px;
@@ -284,6 +291,7 @@ body {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     font-family: "NT Wagner", Arial, Helvetica, sans-serif;
+    z-index: 1; /* Asegura que el texto esté sobre el video */
 }
 
 .slide-up {
@@ -331,6 +339,14 @@ body {
     background-image: url("../img/projects/arturo2.jpg");
 }
 
+.cuartaImagen {
+    background-image: url("../img/projects/arturo2.jpg");
+}
+/* 
+.cuartaImagen {
+    z-index: 1; 
+} */
+
 .quintaImagen {
     background-image: url("../img/art/locurote.jpg");
 }
@@ -356,6 +372,118 @@ header img.logo {
     width: 3vw;
     user-select: none;
     pointer-events: none;
+}
+
+
+/* position the navbar center right */
+.navbar {
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* style the individual nav items */
+.navbar a {
+    /* make them little circles */
+    display: block;
+    border-radius: 50%;
+    border: 0.1vw solid white;
+    width: 1vw;
+    height: 1vw;
+
+    /* with some space between them */
+    margin: 0.5vw 0;
+
+    /* hide the text content */
+    overflow: hidden;
+
+    /* establish positioning context for the ::after pseudo-elements (below) */
+    position: relative;
+}
+
+/* the "fill" */
+.navbar a::after {
+    /* won't render without a 'content' rule */
+    content: '';
+
+    /* white fill */
+    background-color: #fff;
+
+    /* zero height until it's active */
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    /* animate the height when it changes */
+    transition: height 0.3s ease;
+}
+
+/* active and hovered elements */
+.navbar a:hover::after,
+.navbar a.active::after {
+    /* change the height to 100%.
+        the transition rule above will cause this to animate */
+    height: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de la disposición a columna */
+    align-items: flex-end; /* Alinea los elementos a la derecha dentro del contenedor */
+}
+
+.navbar ul li {
+    margin-bottom: 1vw;
+}
+
+
+/* make the sections occupy the full screen height */
+section {
+    height: 100vh;
+    background: tomato;
+    color: bisque;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    position: relative;
+}
+
+.navbar {
+    position: fixed;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.section-name {
+    display: none;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    text-align: right;
+    padding-right: 1vw;
+    transform: translateX(-100%) translateY(5.35vw); /* Alinea el texto a la derecha del círculo activo */
+}
+.navbar li.active .section-name {
+    display: block;
 }
 
 /* Estilos para la versión móvil */
@@ -396,68 +524,3 @@ header img.logo {
         /* font-size: 1.4vw; */
     }
 }
-
-/* position the navbar center right */
-.navbar {
-    position: fixed;
-    right: 32px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  /* style the individual nav items */
-  .navbar a {
-    /* make them little circles */
-    display: block;
-    border-radius: 50%;
-    border: 1px solid white;
-    width: 20px;
-    height: 20px;
-    
-    /* with some space between them */
-    margin: 20px 0;
-    
-    /* hide the text content */
-    text-indent: -999px;
-    overflow: hidden;
-    
-    /* establish positioning conext for the ::after pseudo-elements (below)*/
-    position: relative;
-  }
-  
-  /* the "fill" */
-  .navbar a::after {
-    /* won't render without a 'content' rule */
-    content: ''; 
-    
-    /* white fill */
-    background-color: #fff;
-  
-    /* zero height until it's active */
-    position: absolute;
-    bottom: 0;
-    height: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-  
-    /* animate the height when it changes */
-    transition: height 0.3s ease;
-  }
-  
-  /* active and hovered elements */
-  .navbar a:hover::after,
-  .navbar a.active::after {
-    /* change the height to 100%.
-       the transition rule above will cause this to animate */
-    height: 100%;
-  }
-  
-  /* make the sections occupy the full screen height */
-  section {
-    height: 100vh;
-    background: tomato;
-    color: bisque;  
-    display: grid;
-    place-items: center;
-  }

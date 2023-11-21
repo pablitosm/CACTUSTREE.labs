@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="./css/styles.css"> -->
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<!-- <link rel="stylesheet" href="styles.css"> -->
     <link href="https://fonts.cdnfonts.com/css/nt-wagner" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,18 +49,20 @@
 	</div>
 
 	<div class="container">
-		<nav class="navbar">
-		  <ul>
-			<li><a class="active" href="#about">ABOUT</a></li>
-			<li><a href="#projects">PROJECTS</a></li>
-			<li><a href="#moments">MOMENTS</a></li>
-			<li><a href="#art">ART</a></li>
-			<li><a href="#contact">CONTACT</a></li>
-		  </ul>
-		</nav>
-	  </div>
+		<div class="navbar">
+			<ul>
+				<li class="active"><a href="#about" data-section-name="ABOUT"></a><div class="section-name">Acerca</div></li>
+				<li><a href="#projects" data-section-name="PROJECTS"></a><div class="section-name">Proyectos</div></li>
+				<li><a href="#moments" data-section-name="MOMENTS"></a><div class="section-name">Momentos</div></li>
+				<li><a href="#art" data-section-name="ART"></a><div class="section-name">Arte</div></li>
+				<li><a href="#contacto" data-section-name="CONTACT"></a><div class="section-name">Contacto</div></li>
+			</ul>
+		</div>
+	</div>
+	
 
 	<div class="about segundaImagen" id="about">
+		
 		<div class="aboutArriba">
 			<p><cite>"CACTUSTREE.labs&#8482;</cite> blends a passion for videos and storytelling with artful experimentation. Each frame tells a story, and every video is a chance 
 				to share genuine and authentic emotions.The purpose of this company is to try to expand our creative side and do what we want, as if nobody is going 
@@ -84,10 +86,10 @@
 		<!-- <div class="centered-text">
 			<h2 class="textApartados">momentos</h2>
 		</div> -->
-		<video class="fade-in" autoplay muted loop playsinline id="video-fondo">
+		<!-- <video class="fade-in" autoplay muted loop playsinline id="video-fondo">
 			<source src="./media/videoplayback.mp4" type="video/mp4">
 			Tu navegador no soporta el elemento de video.
-		</video>
+		</video> -->
 	</div>
 
 	<div class="art quintaImagen" id="art">
@@ -136,8 +138,9 @@
     </footer>	
 
 	<script src="js/jquery-2.1.1.js"></script>
-	<!-- <script src="./js/index.js"></script> -->
-	<script src="index.js"></script>
+	<script src="./js/index.js"></script>
+	<!-- <script src="index.js"></script> -->
+
 	
 </body>
 </html>
