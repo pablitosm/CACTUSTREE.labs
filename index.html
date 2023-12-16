@@ -27,7 +27,7 @@
     </div> -->
 
 	<div id="preloader">
-		<video autoplay muted loop style="width: 100%; height: 100vh; object-fit: cover;">
+		<video autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
 			<source src="./media/ANIMACION.mp4" type="video/mp4">
 		</video>
 	</div>
@@ -41,7 +41,8 @@
 					<li><a href="#projects">PROJECTS</a></li>
 					<li><a href="#moments">MOMENTS</a></li>
 					<li><a href="#art">ART</a></li>
-					<li><a href="../html/html/about.html">CONTACT</a></li>
+					<li><a href="./about">CONTACT</a></li>
+
 				</ul>
 			</nav>
 		</header>
@@ -86,12 +87,12 @@
 	</div> -->
 	<!-- DIV PROYECTOS -->
 
-	<hr>
+	<!-- <hr> -->
 
 	<div class="projects terceraImagen" id="projects">
 		<div class="fila" id="contenido3">
 			<div class="foto">
-				<a href="./html/proyectos/proyecto1.html">
+				<a href="./proyectos/proyecto1">
 					<div class="imagen1">
 						<img src="./img/about/pies.png" alt="">
 						<span class="overlay-text">"proyecto 1"</span>
@@ -99,7 +100,7 @@
 				</a>
 			</div>
 			<div class="foto">
-				<a href="./html/proyectos/proyecto2.html">
+				<a href="./proyectos/proyecto2">
 					<div class="imagen2">
 						<img src="./img/about/Untitled_2.4.1.png" alt="">
 						<span class="overlay-text">"proyecto 2"</span>
@@ -107,7 +108,7 @@
 				</a>
 			</div>
 			<div class="foto">
-				<a href="./html/proyectos/proyecto3.html">
+				<a href="./proyectos/proyecto3">
 					<div class="imagen3">
 						<img src="./img/about/Untitled_2.4.1.jpeg" alt="">
 						<span class="overlay-text">"proyecto 3"</span>
@@ -116,6 +117,7 @@
 			</div>
 		</div>
 	</div>
+	
 		<!-- <div class="fila">
 			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
 			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
@@ -135,31 +137,27 @@
 
 		<div class="fila" id="contenido3">
 			<div class="foto1">
-				<a href="./html/momentos/momento1.html">
+				<a href="./momentos/momento1">
 					<div class="imagen1">
 						<img src="./img/about/Untitled_1.1.jpeg" alt="">
-						<!-- <img src="./img/about/Untitled_1.5.png" alt=""> -->
 						<span class="overlay-text">"momento 1"</span>
 					</div>
 				</a>
 			</div>
 			<div class="foto1">
-				<a href="./html/momentos/momento2.html">
+				<a href="./momentos/momento2">
 					<div class="imagen2">
 						<img src="./img/about/Untitled_1.5.png" alt="">
 						<span class="overlay-text">"momento 2"</span>
 					</div>
 				</a>
 			</div>
-		</div>
-	</div>
+		</div>		
 
-	<hr>
+		<!-- <hr> -->
 
 	<div class="art quintaImagen" id="art">
-		<div class="centered-text">
-			<h2 class="textApartados">apartado "art"</h2>
-		</div>
+
 	</div>
 
 	<!-- <div class="contacto sextaImagen" id="contacto">
@@ -211,7 +209,7 @@
 
 		setTimeout(function() {
 			loader.classList.add('hide');
-		}, 5000);
+		}, 1);
 	</script>
 
 </body>

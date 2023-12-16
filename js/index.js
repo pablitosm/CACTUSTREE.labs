@@ -1,7 +1,7 @@
-window.onload = function() {
-    // Hace scroll a la parte superior de la página al cargar
-    window.scrollTo(0, 0);
-};
+// window.onload = function() {
+//     // Hace scroll a la parte superior de la página al cargar
+//     window.scrollTo(0, 0);
+// };
 
 // document.addEventListener('DOMContentLoaded', (e) => {
 //     const splash = document.querySelector('.splash');
@@ -33,63 +33,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    document.addEventListener('scroll', () => {
+    // document.addEventListener('scroll', () => {
 
         
 
-    // Obtén la posición del scroll actual
-    const scrollPosition = window.scrollY;
+    // // Obtén la posición del scroll actual
+    // const scrollPosition = window.scrollY;
 
-    // Definir los límites de cada sección
-    // const aboutSection = document.getElementById('about').offsetTop;
-    const projectsSection = document.getElementById('projects').offsetTop;
-    const momentsSection = document.getElementById('moments').offsetTop;
-    const artSection = document.getElementById('art').offsetTop;
-    const contactoSection = document.getElementById('contacto').offsetTop;
+    // // Definir los límites de cada sección
+    // // const aboutSection = document.getElementById('about').offsetTop;
+    // const projectsSection = document.getElementById('projects').offsetTop;
+    // const momentsSection = document.getElementById('moments').offsetTop;
+    // const artSection = document.getElementById('art').offsetTop;
+    // const contactoSection = document.getElementById('contacto').offsetTop;
 
-    // Obtén el elemento de navegación
-    const navbar = document.querySelector('.navbar');
+    // // Obtén el elemento de navegación
+    // const navbar = document.querySelector('.navbar');
 
-    // Remueve la clase 'active' de todos los elementos de navegación
-    document.querySelectorAll('.navbar a').forEach(el => el.classList.remove('active'));
+    // // Remueve la clase 'active' de todos los elementos de navegación
+    // document.querySelectorAll('.navbar a').forEach(el => el.classList.remove('active'));
 
-    let activeLink;
+    // let activeLink;
 
-    // Determina la sección actual y agrega la clase 'active' al enlace correspondiente
+    // // Determina la sección actual y agrega la clase 'active' al enlace correspondiente
 
-    // if (scrollPosition < aboutSection) {
-    //     activeLink = navbar.querySelector('a[href="#about"]');
+    // // if (scrollPosition < aboutSection) {
+    // //     activeLink = navbar.querySelector('a[href="#about"]');
+    // //     activeLink.classList.add('active');
+    // // } else 
+
+    // if (scrollPosition < projectsSection) {
+    //     activeLink = navbar.querySelector('a[href="#projects"]');
     //     activeLink.classList.add('active');
-    // } else 
+    // } else if (scrollPosition < momentsSection) {
+    //     activeLink = navbar.querySelector('a[href="#moments"]');
+    //     activeLink.classList.add('active');
+    // } else if (scrollPosition < artSection) {
+    //     activeLink = navbar.querySelector('a[href="#art"]');
+    //     activeLink.classList.add('active');
+    // }
+    // // Actualiza el contenido del contenedor de la sección activa
+    // updateSectionName(activeLink);
+    // });
 
-    if (scrollPosition < projectsSection) {
-        activeLink = navbar.querySelector('a[href="#projects"]');
-        activeLink.classList.add('active');
-    } else if (scrollPosition < momentsSection) {
-        activeLink = navbar.querySelector('a[href="#moments"]');
-        activeLink.classList.add('active');
-    } else if (scrollPosition < artSection) {
-        activeLink = navbar.querySelector('a[href="#art"]');
-        activeLink.classList.add('active');
-    }
-    // Actualiza el contenido del contenedor de la sección activa
-    updateSectionName(activeLink);
-    });
-
-    // Función para actualizar el contenido del contenedor de la sección activa
-    function updateSectionName() {
-        const activeLink = document.querySelector('.navbar a.active');
-        const sectionNameContainer = document.querySelector('.section-name');
+    // // Función para actualizar el contenido del contenedor de la sección activa
+    // function updateSectionName() {
+    //     const activeLink = document.querySelector('.navbar a.active');
+    //     const sectionNameContainer = document.querySelector('.section-name');
     
-        if (activeLink && sectionNameContainer) {
-            // Obtén el nombre de la sección desde el atributo 'data-section-name'
-            const sectionName = activeLink.getAttribute('data-section-name');
+    //     if (activeLink && sectionNameContainer) {
+    //         // Obtén el nombre de la sección desde el atributo 'data-section-name'
+    //         const sectionName = activeLink.getAttribute('data-section-name');
             
-            // Establece el contenido del contenedor de la sección activa
-            sectionNameContainer.innerHTML = sectionName;
-        }
-    }
-    
+    //         // Establece el contenido del contenedor de la sección activa
+    //         sectionNameContainer.innerHTML = sectionName;
+    //     }
+    // }
 
     let innerCursor = document.querySelector(".inner-cursor");
     let outerCursor = document.querySelector(".outer-cursor");

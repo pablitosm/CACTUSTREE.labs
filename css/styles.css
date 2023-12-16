@@ -281,7 +281,18 @@ footer {
     z-index: 1000; 
 }
 
+#contenido5 {
+    background-color: red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+}
 
+#contenido5 header {
+    background-color: #aee4b2;
+
+}
 
 #contenido2 ul {
     position: absolute; 
@@ -592,6 +603,12 @@ section {
         font-family: "NT Wagner", Arial, Helvetica, sans-serif;
         /* font-size: 1.4vw; */
     }
+
+    .textContainerProyecto1 {
+        font-size: 2vh;
+        width: 90%;
+        text-align: justify;
+    }
 }
 
 
@@ -705,6 +722,12 @@ section {
     position: fixed;
     z-index: 10001;
     overflow: hidden; /* Asegura que el video no se desborde del preloader */
+}
+
+.textContainerProyecto1 {
+    padding-top: 100px;
+    padding-bottom: 40px;
+
 }
 
 .hide {
