@@ -3,19 +3,19 @@ window.onload = function() {
     window.scrollTo(0, 0);
 };
 
-document.addEventListener('DOMContentLoaded', (e) => {
-    const splash = document.querySelector('.splash');
+// document.addEventListener('DOMContentLoaded', (e) => {
+//     const splash = document.querySelector('.splash');
 
-    setTimeout(() => {
-        // Añade la clase para desplazar hacia arriba
-        splash.classList.add('slide-up');
+//     setTimeout(() => {
+//         // Añade la clase para desplazar hacia arriba
+//         splash.classList.add('slide-up');
 
-        // Elimina el elemento después de que termine la animación de desplazamiento
-        setTimeout(() => {
-            splash.remove();
-        }, 1000); // El mismo tiempo que la duración de la transición en el CSS
-    }, 100);
-});
+//         // Elimina el elemento después de que termine la animación de desplazamiento
+//         setTimeout(() => {
+//             splash.remove();
+//         }, 1000); // El mismo tiempo que la duración de la transición en el CSS
+//     }, 100);
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
     var menuItems = document.querySelectorAll("nav ul li");
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollPosition = window.scrollY;
 
     // Definir los límites de cada sección
-    const aboutSection = document.getElementById('about').offsetTop;
+    // const aboutSection = document.getElementById('about').offsetTop;
     const projectsSection = document.getElementById('projects').offsetTop;
     const momentsSection = document.getElementById('moments').offsetTop;
     const artSection = document.getElementById('art').offsetTop;
@@ -56,10 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeLink;
 
     // Determina la sección actual y agrega la clase 'active' al enlace correspondiente
-    if (scrollPosition < aboutSection) {
-        activeLink = navbar.querySelector('a[href="#about"]');
-        activeLink.classList.add('active');
-    } else if (scrollPosition < projectsSection) {
+
+    // if (scrollPosition < aboutSection) {
+    //     activeLink = navbar.querySelector('a[href="#about"]');
+    //     activeLink.classList.add('active');
+    // } else 
+
+    if (scrollPosition < projectsSection) {
         activeLink = navbar.querySelector('a[href="#projects"]');
         activeLink.classList.add('active');
     } else if (scrollPosition < momentsSection) {
@@ -68,11 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (scrollPosition < artSection) {
         activeLink = navbar.querySelector('a[href="#art"]');
         activeLink.classList.add('active');
-    } else {
-        activeLink = navbar.querySelector('a[href="#contacto"]');
-        activeLink.classList.add('active');
     }
-
     // Actualiza el contenido del contenedor de la sección activa
     updateSectionName(activeLink);
     });
@@ -187,6 +186,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // document.addEventListener("DOMContentLoaded", function () {
 //     var menuItems = document.querySelectorAll("nav ul li a");
 
+//     var menuItems = document.querySelectorAll(".navbar a");
+
 //     function updateActiveMenuItem() {
 //         var scrollPosition = window.scrollY;
 
@@ -206,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //             }
 //         });
 //     }
+
 
 //     window.addEventListener("scroll", updateActiveMenuItem);
 //     window.addEventListener("load", updateActiveMenuItem);

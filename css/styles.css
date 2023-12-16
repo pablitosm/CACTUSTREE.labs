@@ -1,15 +1,16 @@
 html {
     scroll-behavior: smooth;
+    /* background-color: #aee4b2; */
 }
 
 * {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    /* font-weight: 300; */
     box-sizing: border-box;
 }
 
 hr {
-    border: 1.5px solid #f7e507; /* Grosor y color del borde */
+    border: 1.5px solid #aee4b2; /* Grosor y color del borde */
     margin: 3vh 0; /* Ajusta el espacio alrededor del hr según sea necesario */
 }
 
@@ -42,8 +43,13 @@ hr {
     transform: translateY(-100%);
 }
 
+.imageFooter {
+    width: 1vw;
+    height: 1vw;
+}
+
 header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -80,18 +86,54 @@ nav ul li.active a {
     font-size: 1.2vw;
 }
 
-body {
+nav ul li a:hover {
+    color: #aee4b2;
+    font-size: 1.2vw;
+}
+
+.bodyIndex {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-color: #aee4b2; */
     cursor: none;
-    /* background-color: red; */
-    /* background-image: url("../img/fondo.jpeg"); */
-    
 }
 
+.bodyAbout {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative
+    /* cursor: none;     */
+}
+
+.bodyProyecto1 {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative
+    /* cursor: none;     */
+}
+
+.textContainerProyecto1 {
+    font-size: 2vh;
+    width: 70%;
+    text-align: justify;
+}
+
+.image1Proyecto1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 .textLogo,
 .mail {
@@ -113,7 +155,7 @@ body {
 
 .textApartados {
     font-size: 8vw;
-    color: #f7e507;
+    color: #aee4b2;
     /* font-size: 4vw; */
 }
 
@@ -131,24 +173,44 @@ body {
     /* width: 100vh; */
 }
 
-.aboutArriba {
+.aboutTextContainer {
     margin-top: 10vh;
+}
+
+.aboutArriba,
+.aboutMedio,
+.aboutAbajo {
     color: #fff;
     font-size: 3vh;
     width: 70%;
-    /* height: 50vh; */
-    text-align: justify;
-    margin-left: 10vh;
+    margin: 0 0 0 10vh;
 }
 
-.aboutAbajo {
-    margin-top: 15vh;
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #aee4b2;
+    color: #fff;
+    text-align: left;
+    padding: 0 1% 0 1%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLeft, 
+.footerRight {
+    width: 50%;
+}
+
+.contactContainer {
     color: #fff;
     font-size: 3vh;
-    width: 50%;
-    height: 100vh;
-    text-align: justify;
-    margin-left: 10vh;
+    margin: 15vh 0 0 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .pequegnito p {
@@ -195,7 +257,7 @@ body {
     object-fit: cover;
 }
 
-#contenido {
+/* #contenido {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -210,17 +272,26 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+} */
 
 #contenido1 {
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     width: 100%;
-    /* z-index: 1000;  */
+    z-index: 1000; 
+}
+
+
+
+#contenido2 ul {
+    position: absolute; 
+    top: 0; 
+    right: 0;
+    margin-right: 1%;
 }
 
 .inner-cursor {
-    position:fixed;
+    position: fixed;
     left: 10px;
     width: 10px;
     height: 10px;
@@ -228,25 +299,21 @@ body {
     background-color: #fff;
     mix-blend-mode: difference;
     pointer-events: none;
-    transition: width 0.5s, height 0.5s;
+    z-index: 10001;
 }
 
 .inner-cursor, .outer-cursor, .custom-text {
     position: fixed;
-    z-index: 9999;
 }
 
 .outer-cursor {
-    position: fixed;
-    left: 10px;
-    width: 25px;
-    height: 25px;
-    transform: translate(-50%, -50%);
+
+    margin-top: -10px;
     border: 1px solid #fff;
     mix-blend-mode: difference;
-    pointer-events: none;
-    transition: 0.1s;
-    z-index: 10000; /* Ajustar el valor según sea necesario */
+    pointer-events: auto; /* o intenta con 'all' */
+    transition: 0.1s; /* Ajusta la duración de la transición */
+    z-index: 10000;
 }
 
 
@@ -311,11 +378,9 @@ body {
     font-size: 2rem; /* Tamaño del título */
     margin: 0; /* Elimina el margen predeterminado del título */
 }
-
+.ceroImagen,
 .primeraImagen,
 .segundaImagen,
-.terceraImagen,
-.cuartaImagen,
 .quintaImagen,
 .sextaImagen {
     background-color: black;
@@ -327,28 +392,31 @@ body {
     height: 100vh; /* Ocupa el 100% de la altura de la ventana */
 }
 
+.ceroImagen {
+    background-image: url("../img/principal/fondo.jpeg");
+}
+
 .primeraImagen {
     background-image: url("../img/fondo.jpeg");
 }
 
 .segundaImagen {
-    background-image: url("../img/about/arturo.jpg");
+    background-image: url("../img/about/Untitled_1.1.jpeg");
 }
 
-.terceraImagen {
-    background-image: url("../img/projects/arturo2.jpg");
-}
-
-.cuartaImagen {
-    background-image: url("../img/projects/arturo2.jpg");
-}
-/* 
-.cuartaImagen {
-    z-index: 1; 
+/* .cuartaImagen {
+    background-image: url("../img/about/Untitled_1.9.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
 } */
 
+
 .quintaImagen {
-    background-image: url("../img/art/locurote.jpg");
+    background-image: url("../img/about/4_1.2.jpeg");
 }
 
 .sextaImagen {
@@ -374,13 +442,13 @@ header img.logo {
     pointer-events: none;
 }
 
-
 /* position the navbar center right */
 .navbar {
     position: fixed;
     right: 32px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10000;
 }
 
 /* style the individual nav items */
@@ -509,6 +577,7 @@ section {
     .outer-cursor,
     .custom-text {
         display: none;
+        
     }
 
     .textLogo {
@@ -522,5 +591,133 @@ section {
         text-decoration: none;
         font-family: "NT Wagner", Arial, Helvetica, sans-serif;
         /* font-size: 1.4vw; */
+    }
+}
+
+
+.headerAbout {
+    background-color: #000204;
+    color: #aee4b2;
+    /* text-align: center; */
+    padding: 20px 0;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cactus-text {
+    display: inline-block;
+    padding-right: 20px; /* Ajusta el espacio entre las palabras */
+    font-size: 1.5em;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.fila {
+    display: flex;
+}
+
+.foto {
+    width: calc(33.33%);
+    overflow: hidden;
+    position: relative;
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Transición tanto para transform como para filter */
+}
+
+
+.foto:hover .overlay-text {
+    opacity: 1;
+}
+
+.foto:hover img {
+    transform: scale(1.1);
+    filter: brightness(70%); /* Puedes ajustar este valor para cambiar la luminosidad durante el hover */
+}
+
+.foto:not(:hover) img {
+    transform: scale(1);
+    filter: brightness(100%); /* Revertir el brillo al sacar el ratón */
+}
+
+.foto1 {
+    width: calc(50%);
+    overflow: hidden;
+    position: relative;
+}
+
+.foto1 img,
+.foto2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease; /* Transición tanto para transform como para filter */
+}
+
+
+.foto1:hover .overlay-text,
+.foto2:hover .overlay-text {
+    opacity: 1;
+}
+
+.foto1:hover img {
+    transform: scale(1.1);
+    filter: brightness(70%); /* Puedes ajustar este valor para cambiar la luminosidad durante el hover */
+}
+
+
+.foto2:hover img {
+    /* transform: scale(1.05); */
+    filter: brightness(70%); /* Puedes ajustar este valor para cambiar la luminosidad durante el hover */
+}
+
+.foto1:not(:hover) img,
+.foto2:not(:hover) img {
+    transform: scale(1);
+    filter: brightness(100%); /* Revertir el brillo al sacar el ratón */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease;
+}
+
+#preloader {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10001;
+    overflow: hidden; /* Asegura que el video no se desborde del preloader */
+}
+
+.hide {
+    animation: slide-up 1s ease-out forwards;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 1;
     }
 }

@@ -11,57 +11,67 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="../img/favicon.png" type="image/png" sizes="200x200">
+    <link rel="icon" href="./img/favicon.png" type="image/png" sizes="200x200">
     <title>CACTUSTREE.labs</title>
 </head>
 
-<body>
-    <div class="splash-container">
+<body class="bodyIndex">
+    <!-- <div class="splash-container">
         <div class="splash">
-			<!-- <h2 class="fade-in">"aqui poner animacion logo o lo que pollas sea"</h2> -->
+			<h2 class="fade-in">"aqui poner animacion logo o lo que pollas sea"</h2>
 			<video src="./media/ANIMACION.mp4" class="fade-in" autoplay muted loop playsinline id="video-fondo">
 				Tu navegador no soporta el elemento de video.
 			</video>
 
         </div>
-    </div>
+    </div> -->
 
-    <header>
-		<img class="logo"src="./img/principal/logo.png" alt="">
-        <div id="contenido1">
-				<nav>
-					<ul>
-						<li><a href="#about">ABOUT</a></li>
-						<li><a href="#projects">PROJECTS</a></li>
-						<li><a href="#moments">MOMENTS</a></li>
-						<li><a href="#art">ART</a></li>
-						<li><a href="#contacto">CONTACT</a></li>
-					</ul>
-				</nav>
-        </div>
-    </header>
-		
-	<div id="contenido">
+	<div id="preloader">
+		<video autoplay muted loop style="width: 100%; height: 100vh; object-fit: cover;">
+			<source src="./media/ANIMACION.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<div id="contenido1" style="position: relative;">
+		<header style="position: absolute; top: 0; left: 0;">
+			<img class="logo" src="./img/principal/logo.png" alt="">
+			<nav>
+				<ul>
+					<!-- <li><a href="#about">ABOUT</a></li> -->
+					<li><a href="#projects">PROJECTS</a></li>
+					<li><a href="#moments">MOMENTS</a></li>
+					<li><a href="#art">ART</a></li>
+					<li><a href="../html/html/about.html">CONTACT</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+
+	<div class="ceroImagen">
 		<div class="centered-text">
 			<h1 class="textLogo">CACTUSTREE.labs&#8482;</h1>
 			<h2 class="mail">info@cactustreelabs.com</h2>
 		</div>
 	</div>
+		
+	<!-- <div id="contenido">
+		<div class="centered-text">
+			<h1 class="textLogo">CACTUSTREE.labs&#8482;</h1>
+			<h2 class="mail">info@cactustreelabs.com</h2>
+		</div>
+	</div> -->
 
 	<div class="container">
 		<div class="navbar">
 			<ul>
-				<li class="active"><a href="#about" data-section-name="ABOUT"></a><div class="section-name">Acerca</div></li>
 				<li><a href="#projects" data-section-name="PROJECTS"></a><div class="section-name">Proyectos</div></li>
 				<li><a href="#moments" data-section-name="MOMENTS"></a><div class="section-name">Momentos</div></li>
 				<li><a href="#art" data-section-name="ART"></a><div class="section-name">Arte</div></li>
-				<li><a href="#contacto" data-section-name="CONTACT"></a><div class="section-name">Contacto</div></li>
 			</ul>
 		</div>
 	</div>
 	
-
-	<div class="about segundaImagen" id="about">
+	<!-- <div class="about segundaImagen" id="about">
 		
 		<div class="aboutArriba">
 			<p><cite>"CACTUSTREE.labs&#8482;</cite> blends a passion for videos and storytelling with artful experimentation. Each frame tells a story, and every video is a chance 
@@ -73,24 +83,78 @@
 				company and has completed various projects independently. Through images and sounds, he believes in evoking a myriad of emotions in the audience."</p>
 			<img class="imgAbout" src="./img/about/fotoCerca.png">
 		</div>
-	</div>
+	</div> -->
 	<!-- DIV PROYECTOS -->
 
+	<hr>
+
 	<div class="projects terceraImagen" id="projects">
-		<div class="centered-text">
-			<h2 class="textApartados">apartado "proyectos"</h2>
+		<div class="fila" id="contenido3">
+			<div class="foto">
+				<a href="./html/proyectos/proyecto1.html">
+					<div class="imagen1">
+						<img src="./img/about/pies.png" alt="">
+						<span class="overlay-text">"proyecto 1"</span>
+					</div>
+				</a>
+			</div>
+			<div class="foto">
+				<a href="./html/proyectos/proyecto2.html">
+					<div class="imagen2">
+						<img src="./img/about/Untitled_2.4.1.png" alt="">
+						<span class="overlay-text">"proyecto 2"</span>
+					</div>
+				</a>
+			</div>
+			<div class="foto">
+				<a href="./html/proyectos/proyecto3.html">
+					<div class="imagen3">
+						<img src="./img/about/Untitled_2.4.1.jpeg" alt="">
+						<span class="overlay-text">"proyecto 3"</span>
+					</div>
+				</a>
+			</div>
 		</div>
+	</div>
+		<!-- <div class="fila">
+			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
+			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
+			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
+		</div> -->
+		<!-- <div class="fila">
+			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
+			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
+			<div class="foto"><img src="./img/art/locurote.jpg" alt=""></div>
+		</div>  -->
+		<!-- <div class="centered-text">
+			<h2 class="textApartados">apartado "proyectos"</h2>
+		</div> -->
 	</div>
 
 	<div class="moments cuartaImagen" id="moments">
-		<!-- <div class="centered-text">
-			<h2 class="textApartados">momentos</h2>
-		</div> -->
-		<!-- <video class="fade-in" autoplay muted loop playsinline id="video-fondo">
-			<source src="./media/videoplayback.mp4" type="video/mp4">
-			Tu navegador no soporta el elemento de video.
-		</video> -->
+
+		<div class="fila" id="contenido3">
+			<div class="foto1">
+				<a href="./html/momentos/momento1.html">
+					<div class="imagen1">
+						<img src="./img/about/Untitled_1.1.jpeg" alt="">
+						<!-- <img src="./img/about/Untitled_1.5.png" alt=""> -->
+						<span class="overlay-text">"momento 1"</span>
+					</div>
+				</a>
+			</div>
+			<div class="foto1">
+				<a href="./html/momentos/momento2.html">
+					<div class="imagen2">
+						<img src="./img/about/Untitled_1.5.png" alt="">
+						<span class="overlay-text">"momento 2"</span>
+					</div>
+				</a>
+			</div>
+		</div>
 	</div>
+
+	<hr>
 
 	<div class="art quintaImagen" id="art">
 		<div class="centered-text">
@@ -98,9 +162,9 @@
 		</div>
 	</div>
 
-	<div class="contacto sextaImagen" id="contacto">
+	<!-- <div class="contacto sextaImagen" id="contacto">
 		<div class="centered-text1">
-			<!-- <h2 class="textApartados">apartado "contacto"</h2> -->
+			<h2 class="textApartados">apartado "contacto"</h2>
 			<div class="contactoArriba">
 				<p>"If you want to receive information about when the next <em>ITEM</em> will be released."</p>
 				<p>info@cactustreelabs.com</p>
@@ -113,7 +177,7 @@
 				<p><img src="./img/contact/correo.png" alt="Correo Icono" class="icono-correo"> info@cactustreelabs.com</p>
 				<p><img src="./img/contact/llamada-telefonica.png" alt="Llamada telefonica Icono" class="llamada-correo">+34 692 94 81 26</p>
 			</div>
-		</div>
+		</div> -->
 <!-- 
 		<div class="redesSociales">
 			<a class="logoInstagram" href="https://www.instagram.com/cactustree.labs/" target="_blank">
@@ -126,21 +190,29 @@
 				<img src="./img/vimeo.png" alt="">
 			</a>
 		</div> -->
-	</div>
+	<!-- </div> -->
 
 
     <div class="inner-cursor"></div>
     <div class="outer-cursor"></div>
     <div class="custom-text"></div>
 
-    <footer>
-        <!-- ... Contenido de tu footer actual ... -->
-    </footer>	
+	<footer>
+		<p>@CACTUSTREE.labs</p>
+		<a href="https://www.instagram.com/cactustree.labs/" target="_blank"><img class="imageFooter" src="./img/about/foto.png" alt=""></a>
+	</footer>	
 
 	<script src="js/jquery-2.1.1.js"></script>
 	<script src="./js/index.js"></script>
 	<!-- <script src="index.js"></script> -->
 
-	
+	<script>
+		var loader = document.getElementById("preloader");
+
+		setTimeout(function() {
+			loader.classList.add('hide');
+		}, 5000);
+	</script>
+
 </body>
 </html>
