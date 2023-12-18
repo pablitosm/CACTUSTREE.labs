@@ -711,7 +711,7 @@ section {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2em;
+    font-size: 2vw;
     opacity: 0; /* Inicialmente invisible */
     transition: opacity 0.5s ease;
 }
@@ -743,4 +743,11 @@ section {
         transform: translateY(-100%);
         opacity: 1;
     }
+}
+
+.textGlossy {
+    font-family: "glossy personal use", Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    text-align: center;
+
 }

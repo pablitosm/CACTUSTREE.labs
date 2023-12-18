@@ -228,15 +228,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 // Escucha clics en el menú de navegación
-document.querySelector('.navbar').addEventListener('click', (e) => {
-    // Ignora si el clic no es en un elemento de ancla
-    if (e.target.tagName.toLowerCase() === 'a') {
-        // Remueve la clase 'active' de todos los elementos de navegación
-        document.querySelectorAll('.navbar a').forEach(el => el.classList.remove('active'));
-        // Agrega la clase 'active' al elemento clickeado
-        e.target.classList.add('active');
+// document.querySelector('.navbar').addEventListener('click', (e) => {
+//     // Ignora si el clic no es en un elemento de ancla
+//     if (e.target.tagName.toLowerCase() === 'a') {
+//         // Remueve la clase 'active' de todos los elementos de navegación
+//         document.querySelectorAll('.navbar a').forEach(el => el.classList.remove('active'));
+//         // Agrega la clase 'active' al elemento clickeado
+//         e.target.classList.add('active');
 
-        updateSectionName();
-    }
-});
+//         updateSectionName();
+//     }
+// });
 

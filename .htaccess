@@ -2,7 +2,19 @@
     RewriteEngine On
     RewriteBase /
 
+    # Redirigir
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^([^\.]+)$ html/$1.html [NC,L]
+
+    # Permitir la carga de archivos de video
+    RewriteCond %{REQUEST_URI} \.(mp4|avi|mov)$
+    RewriteRule ^ - [L]
+
+    # Restringir el acceso a la página de desarrollo
+    RewriteCond %{REMOTE_ADDR} !^88\.7\.59\.196$
+    RewriteCond %{REQUEST_URI} !^/pagina-en-desarrollo.html$
+    RewriteRule ^(.*)$ /pagina-en-desarrollo.html [R=302,L]
+
+    
 </IfModule>
