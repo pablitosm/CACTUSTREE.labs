@@ -1,17 +1,26 @@
 html {
     scroll-behavior: smooth;
-    /* background-color: #aee4b2; */
+}
+
+:root {
+    /* --color-fondo: #d9e9c7; */
+    --color-fondo: #FF0000;
 }
 
 * {
-    font-family: 'Montserrat', sans-serif;
-    /* font-weight: 300; */
+    font-family: 'Alte Haas Grotesk', sans-serif;
     box-sizing: border-box;
 }
 
+
+
+::selection {
+    background-color: var(--color-fondo); 
+}
+
 hr {
-    border: 1.5px solid #aee4b2; /* Grosor y color del borde */
-    margin: 3vh 0; /* Ajusta el espacio alrededor del hr según sea necesario */
+    border: 1.5px solid var(--color-fondo);
+    margin: 3vh 0;
 }
 
 .splash-container {
@@ -25,7 +34,6 @@ hr {
 }
 
 .splash {
-    /* overflow: hidden; */
     position: fixed;
     top: 0;
     left: 0;
@@ -44,12 +52,11 @@ hr {
 }
 
 .imageFooter {
-    width: 1vw;
-    height: 1vw;
+    width: 2.8vh;
+    height: 2.8vh;
 }
 
 header {
-    /* position: fixed; */
     top: 0;
     left: 0;
     width: 100%;
@@ -77,18 +84,23 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1vw;
+    font-size: 2.5vh;
     transition: color 0.3s, font-size 0.3s;
 }
 
 nav ul li.active a {
-    color: #aee4b2;
-    font-size: 1.2vw;
+    color: var(--color-fondo);
+    font-size: 3vh;
 }
 
 nav ul li a:hover {
-    color: #aee4b2;
+    color: var(--color-fondo);
     font-size: 1.2vw;
+}
+
+.navBarMomentos li a:hover,
+.navBarProyectos li a:hover {
+    color: white !important;
 }
 
 .bodyIndex {
@@ -97,7 +109,6 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: #aee4b2; */
     cursor: none;
 }
 
@@ -109,7 +120,6 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     position: relative
-    /* cursor: none;     */
 }
 
 .bodyProyecto1 {
@@ -120,7 +130,6 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
     position: relative
-    /* cursor: none;     */
 }
 
 .textContainerProyecto1 {
@@ -135,42 +144,40 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
+.logoCactusTree {
+    height: 3vh;
+    /* background-color: red; */
+}
+
 .textLogo,
 .mail {
-    font-family: "NT Wagner", Arial, Helvetica, sans-serif;
-    color: #aee4b2;
-    /* text-align: center; */
+    font-family: "Alte Haas Grotesk", Arial, Helvetica, sans-serif;
+    color: var(--color-fondo);
 }
 
 .textLogo {
     font-size: 2vw;
-    /* font-size: 4vw; */
 }
 
 .mail {
-    /* margin-top: -200px; */
-    font-size: 0.7vw;
-    /* font-size: 1.4vw; */
+    font-size: 1.8vh;
 }
 
 .textApartados {
     font-size: 8vw;
-    color: #aee4b2;
-    /* font-size: 4vw; */
+    color: var(--color-fondo);
 }
 
 .contactoArriba {
     margin-top: 10vh;
     color: #f7e507;
     font-size: 2.3vw;
-    /* width: 100vh; */
 }
 
 .contactoAbajo {
     margin-top: 10vh;
     color: #f7e507;
     font-size: 2vw;
-    /* width: 100vh; */
 }
 
 .aboutTextContainer {
@@ -189,11 +196,12 @@ nav ul li a:hover {
 footer {
     width: 100%;
     height: 5vh;
-    background-color: #aee4b2;
+    background-color: var(--color-fondo);
     color: #fff;
     text-align: left;
     padding: 0 1% 0 1%;
     bottom: 0;
+    font-size: 2vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -216,15 +224,15 @@ footer {
 .pequegnito p {
     width: 50%;
     text-align: justify;
-    margin-left: 10vh; /* Puedes ajustar el valor del margen según tus preferencias */
+    margin-left: 10vh;
 }
 
 .icono-correo,
 .llamada-correo {
-    height: 1.5em; /* Ajusta la altura según tus preferencias */
-    width: auto; /* Mantén la proporción del ícono */
-    vertical-align: middle; /* Centra la imagen verticalmente con respecto al texto */
-    margin-right: 1vh; /* Ajusta el margen derecho según tus preferencias */
+    height: 1.5em;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 1vh;
 }
 
 .centered-text {
@@ -257,23 +265,6 @@ footer {
     object-fit: cover;
 }
 
-/* #contenido {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-top: 10vh;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 1;
-    background-image: url("../img/principal/fondo.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-} */
-
 #contenido1 {
     position: fixed;
     top: 0;
@@ -290,7 +281,7 @@ footer {
 }
 
 #contenido5 header {
-    background-color: #aee4b2;
+    background-color: var(--color-fondo);
 
 }
 
@@ -301,43 +292,41 @@ footer {
     margin-right: 1%;
 }
 
-.inner-cursor {
-    position: fixed;
-    left: 10px;
-    width: 10px;
-    height: 10px;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    mix-blend-mode: difference;
-    pointer-events: none;
-    z-index: 10001;
-}
+
 
 .inner-cursor, .outer-cursor, .custom-text {
     position: fixed;
 }
 
-.outer-cursor {
+#cursorText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: red; /* Color del texto */
+    pointer-events: none; /* Para que el texto no afecte la interactividad */
+}
 
+.outer-cursor {
     margin-top: -10px;
     border: 1px solid #fff;
     mix-blend-mode: difference;
-    pointer-events: auto; /* o intenta con 'all' */
-    transition: 0.1s; /* Ajusta la duración de la transición */
+    pointer-events: auto;
+    transition: 0.1s;
     z-index: 10000;
 }
 
-
 .logo {
-    height: 3vw;
-    width: 3vw;
+    height: 6vh;
+    width: 6vh;
     position: fixed;
-    top: 0.3vw;
-    right: 0.3vw;
+    top: 0.3vh;
+    right: 0.3vh;
     user-select: none;
     pointer-events: none;
+    z-index: 999999;
 }
-
 
 .splash.display-none {
     position: fixed;
@@ -362,19 +351,19 @@ footer {
 
 .splash.fade-out {
     opacity: 0;
-    pointer-events: none; /* Deshabilita los eventos del mouse durante el desvanecimiento */
+    pointer-events: none;
 }
 
 .fade-in {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     font-family: "NT Wagner", Arial, Helvetica, sans-serif;
-    z-index: 1; /* Asegura que el texto esté sobre el video */
+    z-index: 1;
 }
 
 .slide-up {
     transform: translateY(-100%);
-    pointer-events: none; /* Deshabilita los eventos del mouse durante el desplazamiento */
+    pointer-events: none;
 }
 
 .separator {
@@ -386,25 +375,26 @@ footer {
 .title {
     color: white;
     text-align: center;
-    font-size: 2rem; /* Tamaño del título */
-    margin: 0; /* Elimina el margen predeterminado del título */
+    font-size: 2rem;
+    margin: 0;
 }
 .ceroImagen,
 .primeraImagen,
 .segundaImagen,
 .quintaImagen,
 .sextaImagen {
-    background-color: black;
+    background-color: #0e1111;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     /* background-attachment: fixed; */
     width: 100%;
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    height: 100vh;
 }
 
 .ceroImagen {
-    background-image: url("../img/principal/fondo.jpeg");
+    /* background-image: url("../img/fondo-index.jpeg"); */
+    background-color: #0e1111;
 }
 
 .primeraImagen {
@@ -412,48 +402,41 @@ footer {
 }
 
 .segundaImagen {
-    background-image: url("../img/about/Untitled_1.1.jpeg");
+    background-image: url("../img/moments/momento1.jpeg");
 }
 
-/* .cuartaImagen {
-    background-image: url("../img/about/Untitled_1.9.png");
-    background-color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    position: relative;
-} */
-
-
 .quintaImagen {
-    background-image: url("../img/about/4_1.2.jpeg");
+    background-image: url("../img/about/4_1.2-min.jpeg");
 }
 
 .sextaImagen {
-    background-image: url("../img/contact/dientes.jpeg");
+    background-color: #0e1111;
 }
 
 .custom-text {
-    position: absolute;
-    font-size: 14px;
+    font-size: 4vh;
     margin-top: -10px;
     pointer-events: none;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
     pointer-events: none;
     transition: width 1s, height 1s;
-    font-family: "NT Wagner", Arial, Helvetica, sans-serif;
+    font-family: "Alte Haas Grotesk", Arial, Helvetica, sans-serif;
+    z-index: 10;
 }
 
-header img.logo {
-    height: 3vw;
-    width: 3vw;
-    user-select: none;
+.inner-cursor {
+    position: fixed;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    mix-blend-mode: difference;
     pointer-events: none;
+    z-index: 999999;
 }
 
-/* position the navbar center right */
 .navbar {
     position: fixed;
     right: 32px;
@@ -462,50 +445,31 @@ header img.logo {
     z-index: 10000;
 }
 
-/* style the individual nav items */
 .navbar a {
-    /* make them little circles */
     display: block;
     border-radius: 50%;
     border: 0.1vw solid white;
-    width: 1vw;
-    height: 1vw;
-
-    /* with some space between them */
-    margin: 0.5vw 0;
-
-    /* hide the text content */
+    width: 2.2vh;
+    height: 2.2vh;
+    margin: 1vh 0;
     overflow: hidden;
-
-    /* establish positioning context for the ::after pseudo-elements (below) */
     position: relative;
 }
 
-/* the "fill" */
 .navbar a::after {
-    /* won't render without a 'content' rule */
     content: '';
-
-    /* white fill */
     background-color: #fff;
-
-    /* zero height until it's active */
     position: absolute;
     bottom: 0;
     height: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-
-    /* animate the height when it changes */
     transition: height 0.3s ease;
 }
 
-/* active and hovered elements */
 .navbar a:hover::after,
 .navbar a.active::after {
-    /* change the height to 100%.
-        the transition rule above will cause this to animate */
     height: 100%;
 }
 
@@ -514,16 +478,10 @@ header img.logo {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Cambia la dirección de la disposición a columna */
-    align-items: flex-end; /* Alinea los elementos a la derecha dentro del contenedor */
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.navbar ul li {
-    margin-bottom: 1vw;
-}
-
-
-/* make the sections occupy the full screen height */
 section {
     height: 100vh;
     background: tomato;
@@ -540,27 +498,27 @@ section {
     position: fixed;
 }
 
-.navbar ul {
+/* .navbar ul {
     list-style: none;
     padding: 0;
-}
+} */
 
-.navbar li {
+/* .navbar li {
     position: relative;
-}
+} */
 
 .section-name {
     display: none;
     white-space: nowrap;
     position: absolute;
-    top: 50%;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
+    font-size: 2vh;
     text-align: right;
-    padding-right: 1vw;
-    transform: translateX(-100%) translateY(5.35vw); /* Alinea el texto a la derecha del círculo activo */
+    padding-right: 2vh;
+    transform: translateX(-100%) translateY(-3.3vh);
 }
+
 .navbar li.active .section-name {
     display: block;
 }
@@ -577,11 +535,11 @@ section {
     }
 
     nav ul li a {
-        font-size: 3vw; /* Ajusta el tamaño de fuente para dispositivos móviles según sea necesario */
+        font-size: 3vw;
     }
 
     nav ul li a:hover {
-        font-size: 3.5vw; /* Ajusta el tamaño de fuente al hacer hover en dispositivos móviles según sea necesario */
+        font-size: 3.5vw;
     }
 
     .inner-cursor,
@@ -609,12 +567,55 @@ section {
         width: 90%;
         text-align: justify;
     }
-}
 
+    .logoCactusTree {
+        height: 4vw;
+    }
+
+    .mail {
+        font-size: 3vw;
+    }
+
+    .projects,
+    .moments {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .fila {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .foto,
+    .foto1 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .foto img,
+    .foto1 img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .aboutArriba,
+    .aboutMedio,
+    .aboutAbajo,
+    .contactContainer{
+        display: none;
+    } 
+}
 
 .headerAbout {
     background-color: #000204;
-    color: #aee4b2;
+    color: var(--color-fondo);
     /* text-align: center; */
     padding: 20px 0;
 }
@@ -626,7 +627,7 @@ section {
 
 .cactus-text {
     display: inline-block;
-    padding-right: 20px; /* Ajusta el espacio entre las palabras */
+    padding-right: 20px;
     font-size: 1.5em;
     animation: marquee 10s linear infinite;
 }
@@ -641,35 +642,51 @@ section {
 }
 
 .foto {
-    width: calc(33.33%);
+    width: calc(100%);
     overflow: hidden;
     position: relative;
 }
 
-.foto img {
+.foto img, .foto .imagen1-hover img {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.5s ease, filter 0.5s ease; /* Transición tanto para transform como para filter */
+    /* transition: transform 0.5s ease, filter 0.5s ease, opacity 0.5s ease; */
 }
 
+.foto .imagen1-hover {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
 
 .foto:hover .overlay-text {
     opacity: 1;
 }
 
-.foto:hover img {
-    transform: scale(1.1);
-    filter: brightness(70%); /* Puedes ajustar este valor para cambiar la luminosidad durante el hover */
+.foto:hover .imagen1 img {
+    /* transform: scale(1.1);
+    filter: brightness(70%); */
+    opacity: 0;
+}
+
+.foto:hover .imagen1-hover {
+    display: block;
+    /* transform: scale(1.1);
+    filter: brightness(70%); */
+    opacity: 1;
 }
 
 .foto:not(:hover) img {
-    transform: scale(1);
-    filter: brightness(100%); /* Revertir el brillo al sacar el ratón */
+    /* transform: scale(1);
+    filter: brightness(100%); */
+    opacity: 1;
 }
 
 .foto1 {
-    width: calc(50%);
+    width: calc(100%);
     overflow: hidden;
     position: relative;
 }
@@ -679,7 +696,7 @@ section {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.5s ease, filter 0.5s ease; /* Transición tanto para transform como para filter */
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 
@@ -690,30 +707,43 @@ section {
 
 .foto1:hover img {
     transform: scale(1.1);
-    filter: brightness(70%); /* Puedes ajustar este valor para cambiar la luminosidad durante el hover */
+    filter: brightness(70%);
 }
 
 
 .foto2:hover img {
     /* transform: scale(1.05); */
-    filter: brightness(70%); /* Puedes ajustar este valor para cambiar la luminosidad durante el hover */
+    filter: brightness(70%);
 }
 
 .foto1:not(:hover) img,
 .foto2:not(:hover) img {
     transform: scale(1);
-    filter: brightness(100%); /* Revertir el brillo al sacar el ratón */
+    filter: brightness(100%);
 }
 
 .overlay-text {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2vw;
-    opacity: 0; /* Inicialmente invisible */
+    font-size: 4vh;
+    opacity: 0;
     transition: opacity 0.5s ease;
+}
+
+.overlay-text-mid {
+    top: 50% !important;
+}
+
+.overlay-text-small {
+    font-size: 2.5vh; /* Tamaño de fuente más pequeño */
+    position: absolute;
+    color: white;
+    top: 50%;
+    text-align: center;
+    width: 100%;
 }
 
 #preloader {
@@ -721,7 +751,12 @@ section {
     width: 100%;
     position: fixed;
     z-index: 10001;
-    overflow: hidden; /* Asegura que el video no se desborde del preloader */
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#preloader.hide {
+    display: none;
 }
 
 .textContainerProyecto1 {
@@ -749,5 +784,4 @@ section {
     font-family: "glossy personal use", Arial, Helvetica, sans-serif;
     font-size: 1vw;
     text-align: center;
-
 }

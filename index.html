@@ -8,6 +8,7 @@
     <link href="https://fonts.cdnfonts.com/css/nt-wagner" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/glossy-personal-use" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+	<link href="https://fonts.cdnfonts.com/css/alte-haas-grotesk" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -16,22 +17,22 @@
 </head>
 
 <body class="bodyIndex">
-
+<!-- 
 	<div id="preloader">
 		<video autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
 			<source src="./media/ANIMACION.mp4" type="video/mp4">
 		</video>
-	</div>
+	</div> -->
 
 	<div id="contenido1" style="position: relative;">
 		<header style="position: absolute; top: 0; left: 0;">
-			<img class="logo" src="./img/principal/logo.png" alt="">
+			<a href="https://google.com"><img class="logo" src="./img/principal/logo.png" alt=""></a>
 			<nav>
 				<ul>
 					<li><a href="#projects">PROJECTS</a></li>
 					<li><a href="#moments">MOMENTS</a></li>
 					<li><a href="#art">ART</a></li>
-					<li><a href="./about">CONTACT</a></li>
+					<li><a href="./html/about">CONTACT</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -39,8 +40,9 @@
 
 	<div class="ceroImagen">
 		<div class="centered-text">
-			<h1 class="textLogo">CACTUSTREE.labs&#8482;</h1>
-			<h2 class="mail">info@cactustreelabs.com</h2>
+			<img class="logoCactusTree" src="./img/principal/Recurso 36LOGO FINAL.png" alt="">
+			<!-- <h1 class="textLogo">CACTUSTREE.labs&#8482;</h1> -->
+			<!-- <h2 class="mail">info@cactustreelabs.com</h2> -->
 		</div>
 	</div>
 		
@@ -50,48 +52,65 @@
 				<li><a href="#projects" data-section-name="PROJECTS"></a><div class="section-name">Proyectos</div></li>
 				<li><a href="#moments" data-section-name="MOMENTS"></a><div class="section-name">Momentos</div></li>
 				<li><a href="#art" data-section-name="ART"></a><div class="section-name">Arte</div></li>
+				<li><a href="#contact" data-section-name="CONTACT"></a><div class="section-name">Contacto</div></li>
 			</ul>
 		</div>
 	</div>
-	
+
 	<!-- DIV PROYECTOS -->
 	<div class="projects terceraImagen" id="projects">
 		<div class="fila" id="contenido3">
 			<div class="foto">
 				<a href="./proyectos/proyecto1">
 					<div class="imagen1">
-						<img src="./img/about/pies.png" alt="">
-						<span class="overlay-text">"proyecto 1"</span>
+						<img src="./img/principal/web_1.7.1.jpg" alt="">
+					</div>
+					<div class="imagen1-hover">
+						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
+							<source src="./media/teaser pagina web.mp4" type="video/mp4">
+						</video>
+						<div class="overlay-arriba">
+							<span class="overlay-text"><p>zer&oslash;:</p></span>
+						</div>
+						<div class="overlay-abajo">
+							<span class="overlay-text-small"><p>a film only for dreamers</p></span>
+						</div>
 					</div>
 				</a>
 			</div>
 			<div class="foto">
 				<a href="./proyectos/proyecto2">
-					<div class="imagen2">
-						<img src="./img/about/Untitled_2.4.1.png" alt="">
-						<span class="overlay-text">"proyecto 2"</span>
+					<div class="imagen1">
+						<img src="./img/principal/intro_1.1.3.jpg" alt="">
+					</div>
+					<div class="imagen1-hover">
+						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
+							<source src="./media/teaser intro.mp4" type="video/mp4">
+						</video>
+						<span class="overlay-text overlay-text-mid"><p>Intro</p></span>
 					</div>
 				</a>
 			</div>
 			<div class="foto">
 				<a href="./proyectos/proyecto3">
 					<div class="imagen3">
-						<img src="./img/about/Untitled_2.4.1.jpeg" alt="">
-						<span class="overlay-text">"proyecto 3"</span>
+						<img src="./img/principal/the ultimate backcountry ski lodge_2.4.2.jpg" alt="">
+						<span class="overlay-text overlay-text-mid align-mid">the ultimate backcountry ski lodge</span>
 					</div>
 				</a>
 			</div>
 		</div>
 	</div>
+	
 
-	<p>In this website you can see some of my freelance work, if you are interested in working with me, write me or contact me through the contact section.</p>
+	<!-- <p>In this website you can see some of my freelance work, if you are interested in working with me, write me or contact me through the contact section.</p> -->
 	<!-- DIV MOMENTOS -->
 	<div class="moments cuartaImagen" id="moments">
 		<div class="fila" id="contenido3">
 			<div class="foto1">
 				<a href="./momentos/momento1">
 					<div class="imagen1">
-						<img src="./img/about/Untitled_1.1.jpeg" alt="">
+						<img src="./img/moments/momento1.jpeg" alt="">
 						<span class="overlay-text">"momento 1"</span>
 					</div>
 				</a>
@@ -99,7 +118,7 @@
 			<div class="foto1">
 				<a href="./momentos/momento2">
 					<div class="imagen2">
-						<img src="./img/about/Untitled_1.5.png" alt="">
+						<img src="./img/moments/momento2.png" alt="">
 						<span class="overlay-text">"momento 2"</span>
 					</div>
 				</a>
@@ -109,26 +128,33 @@
 
 	<!-- DIV ARTE -->
 	<div class="art quintaImagen" id="art">
+		<div class="centered-text">
+			<h2>arte</h2>
+		</div>
+	</div>
 
+	<div class="contact sextaImagen" id="contact">
+		<div class="centered-text">
+			<h2>contacto</h2>
+		</div>
 	</div>
 
     <div class="inner-cursor"></div>
-    <div class="outer-cursor"></div>
-    <div class="custom-text"></div>
+    <div class="custom-text">hola</div>
 
 	<footer>
 		<p>@CACTUSTREE.labs</p>
 		<a href="https://www.instagram.com/cactustree.labs/" target="_blank"><img class="imageFooter" src="./img/about/foto.png" alt=""></a>
 	</footer>	
 
-	<script src="./js/index.js"></script> 
+	<!-- <script src="./js/index.js"></script>  -->
+	<script src="index.js"></script> 
 
 	<script>
-		var loader = document.getElementById("preloader");
-
-		setTimeout(function() {
-			loader.classList.add('hide');
-		}, 1); // poner 1 para quitar la mierda de intro
+		function playVideo(video) {
+        	video.currentTime = 0; // Reinicia el video al principio
+        	video.play(); // Inicia la reproducción
+    	}
 	</script>
 
 </body>

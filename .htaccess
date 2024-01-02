@@ -2,19 +2,30 @@
     RewriteEngine On
     RewriteBase /
 
-    # Redirigir
+    # Redirigir para todos los archivos HTML dentro de la carpeta 'html'
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([^\.]+)$ html/$1.html [NC,L]
+    RewriteRule ^html/([^\.]+)$ html/$1.html [NC,L]
 
     # Permitir la carga de archivos de video
     RewriteCond %{REQUEST_URI} \.(mp4|avi|mov)$
     RewriteRule ^ - [L]
 
+    # Redirigir a closed.html directamente
+    RewriteRule ^closed$ /closed.html [NC,L]
+
+    # Redirigir para proyectos dentro de la carpeta 'html'
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^proyectos/([^\.]+)$ html/proyectos/$1.html [NC,L]
+
+    # Redirigir para momentos dentro de la carpeta 'html'
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^momentos/([^\.]+)$ html/momentos/$1.html [NC,L]
+
     # Restringir el acceso a la página de desarrollo
     RewriteCond %{REMOTE_ADDR} !^88\.7\.59\.196$
-    RewriteCond %{REQUEST_URI} !^/pagina-en-desarrollo.html$
-    RewriteRule ^(.*)$ /pagina-en-desarrollo.html [R=302,L]
-
-    
+    RewriteCond %{REQUEST_URI} !^/closed(\.html)?$
+    RewriteRule ^(.*)$ /closed$1 [R=302,L]
 </IfModule>
