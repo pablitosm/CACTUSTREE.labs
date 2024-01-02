@@ -1,24 +1,44 @@
 
-    // document.addEventListener('DOMContentLoaded', function() {
-    //     var loader = document.getElementById("preloader");
-    //     var introShown = document.cookie.indexOf('introShown=true') !== -1;
+    document.addEventListener('DOMContentLoaded', function() {
 
-    //     if (!introShown) {
-    //         loader.classList.remove('hide');
-    //         setTimeout(function() {
-    //             loader.classList.add('hide');
-    //             document.cookie = 'introShown=true';
-    //         }, 1);
-    //     } else {
-    //         loader.classList.add('hide');
-    //     }
-    // });
+        grained('#granulado-container', {
+            animate: true,
+            patternWidth: 100,
+            patternHeight: 100,
+            grainOpacity: 0.02,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1,
+            grainChaos: 2,
+            grainSpeed: 100
+        });
+
+        var loader = document.getElementById("preloader");
+        var introShown = document.cookie.indexOf('introShown=true') !== -1;
+
+        if (!introShown) {
+            loader.classList.remove('hide');
+            setTimeout(function() {
+                loader.classList.add('hide');
+                document.cookie = 'introShown=true';
+            }, 5000);
+        } else {
+            loader.classList.add('hide');
+        }
+    });
 
     document.addEventListener("DOMContentLoaded", function () {
+
         let innerCursor = document.querySelector(".inner-cursor");
         let textElement = document.querySelector(".custom-text");
-        let terceraImagenDiv = document.getElementById("projects"); // Usamos el ID del div
 
+        let proyectoUno = document.getElementById("projects1");
+        let proyectoDos = document.getElementById("projects2");
+        let proyectoTres = document.getElementById("projects3");
+
+        let momentoUno = document.getElementById("moment1");
+        let momentoDos = document.getElementById("moment2");
+        let momentoTres = document.getElementById("moment3");
 
         document.addEventListener("mousemove", moveCursor);
 
@@ -30,12 +50,64 @@
             innerCursor.style.top = `${y}px`;
     
             // Verificar si el cursor está sobre el área de "terceraImagen"
-            if (isCursorOverElement(e, terceraImagenDiv)) {
+            if (isCursorOverElement(e, proyectoUno)) {
                 // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
                 textElement.style.display = "block";
     
                 // Puedes cambiar el texto dependiendo de tus necesidades
-                textElement.innerText = "Proyectos";
+                textElement.innerText = "zero";
+    
+                // Ajustar la posición del texto con un retardo
+                setTimeout(() => {
+                    const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+                    textElement.style.left = `${x}px`;
+                    textElement.style.top = `${y - offset}px`;
+                }, 100);
+            } else if (isCursorOverElement(e, proyectoDos)) {
+                // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+                textElement.style.display = "block";
+    
+                // Puedes cambiar el texto dependiendo de tus necesidades
+                textElement.innerText = "intro";
+    
+                // Ajustar la posición del texto con un retardo
+                setTimeout(() => {
+                    const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+                    textElement.style.left = `${x}px`;
+                    textElement.style.top = `${y - offset}px`;
+                }, 100);
+            } else if (isCursorOverElement(e, proyectoTres)) {
+                // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+                textElement.style.display = "block";
+    
+                // Puedes cambiar el texto dependiendo de tus necesidades
+                textElement.innerText = "ski lodge";
+    
+                // Ajustar la posición del texto con un retardo
+                setTimeout(() => {
+                    const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+                    textElement.style.left = `${x}px`;
+                    textElement.style.top = `${y - offset}px`;
+                }, 100);
+            } else if (isCursorOverElement(e, momentoUno)) {
+                // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+                textElement.style.display = "block";
+    
+                // Puedes cambiar el texto dependiendo de tus necesidades
+                textElement.innerText = "momento 1";
+    
+                // Ajustar la posición del texto con un retardo
+                setTimeout(() => {
+                    const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+                    textElement.style.left = `${x}px`;
+                    textElement.style.top = `${y - offset}px`;
+                }, 100);
+            } else if (isCursorOverElement(e, momentoDos)) {
+                // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+                textElement.style.display = "block";
+    
+                // Puedes cambiar el texto dependiendo de tus necesidades
+                textElement.innerText = "momento 2";
     
                 // Ajustar la posición del texto con un retardo
                 setTimeout(() => {
