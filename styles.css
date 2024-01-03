@@ -4,6 +4,10 @@ html {
 
 }
 
+body {
+    overflow-x: hidden;
+}
+
 :root {
     /* --color-fondo: #d9e9c7; */
     --color-fondo: #FF0000;
@@ -149,7 +153,10 @@ nav ul li a:hover {
 
 .logoCactusTree {
     height: 3vh;
-    /* background-color: red; */
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .textLogo,
@@ -239,7 +246,7 @@ footer {
 }
 
 .centered-text {
-    margin-top: 36vh;
+    margin-top: 45vh;
     text-align: center;
     color: white;
     /* font-size: 2vw; */
@@ -409,10 +416,12 @@ footer {
 }
 
 .quintaImagen {
+    /* z-index: 1000000; */
     background-image: url("../img/about/4_1.2-min.jpeg");
 }
 
 .sextaImagen {
+    z-index: 1000000;
     background-color: #0e1111;
 }
 
@@ -486,16 +495,10 @@ footer {
     align-items: flex-end;
 }
 
-section {
-    height: 100vh;
-    background: #0e1111;
-    color: bisque;
-    display: grid;
-    place-items: center;
-}
-
 .container {
     position: relative;
+    z-index: 9999999999999;
+
 }
 
 .navbar {
@@ -770,6 +773,14 @@ section {
     height: 100%;
 }
 
+section {
+    height: 100vh;
+    background: #0e1111;
+    color: bisque;
+    display: grid;
+    place-items: center;
+}
+
 .textContainerProyecto1 {
     padding-top: 100px;
     padding-bottom: 40px;
@@ -796,3 +807,49 @@ section {
     font-size: 1vw;
     text-align: center;
 }
+
+#Home {
+    background-image: url(./img/parallax_prueba/background.png);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #Home h1 {
+    color: red;
+    position: absolute;
+    font-size: 50px;
+    z-index: 2;
+    margin-top: 10px;
+  }
+  #Home img {
+    position: absolute;
+    bottom: 0px;
+  }
+  #Mountain1 {
+    position: absolute;
+    margin-bottom: 106px;
+    margin-left: 60px;
+    width: 100%;
+    pointer-events: none;
+  }
+  #Mountain2 {
+    width: 100%;
+    z-index: 3;
+    pointer-events: none;
+  }
+  #leftCloud,
+  #mainCloud,
+  #rightCloud {
+    top: 120px;
+    width: 200px;
+  }
+  #leftCloud {
+    left: 20px;
+  }
+  #rightCloud {
+    right: 20px;
+  }

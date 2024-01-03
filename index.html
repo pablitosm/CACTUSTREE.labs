@@ -16,7 +16,7 @@
     <title>CACTUSTREE.labs</title>
 </head>
 <body class="bodyIndex" id="body">
-	<section id="granulado-container">
+	<!-- <section id="granulado-container"> -->
 
 	<div id="preloader">
 		<video autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
@@ -39,11 +39,22 @@
 	</div>
 
 	<div class="ceroImagen">
-		<div class="centered-text">
-			<img class="logoCactusTree" src="./img/principal/Recurso 36LOGO FINAL.png" alt="">
+		<section id="Home">
+			<h1 class="textLogo">CACTUSTREE.labs&#8482;</h1>
+
+			<!-- Clouds -->
+			<!-- <img src="./img/parallax_prueba/leftCloud.png" id="leftCloud" alt="">
+			<img src="./img/parallax_prueba/mainCloud.png" id="mainCloud" alt="">
+			<img src="./img/parallax_prueba/rightCloud.png" id="rightCloud" alt=""> -->
+			<!-- Background -->
+			<img src="./img/parallax_prueba/Layer 1.png" id="Mountain1" alt="">
+			<img src="./img/parallax_prueba/Layer 2.png" id="Mountain2" alt="">
+		</section>
+		<!-- <div class="centered-text"> -->
+			<!-- <img class="logoCactusTree" src="./img/principal/Recurso 36LOGO FINAL.png" alt=""> -->
 			<!-- <h1 class="textLogo">CACTUSTREE.labs&#8482;</h1> -->
 			<!-- <h2 class="mail">info@cactustreelabs.com</h2> -->
-		</div>
+		<!-- </div> -->
 	</div>
 		
 	<div class="container">
@@ -149,7 +160,7 @@
 
 	<!-- <script src="./js/index.js"></script>  -->
 	<script src="index.js"></script> 
-	<script src="./js/grained.js"></script>
+	<!-- <script src="./js/grained.js"></script> -->
 
 
 	<script>
@@ -157,8 +168,16 @@
         	video.currentTime = 0;
         	video.play();
     	}
+
+		window.addEventListener(("scroll"),()=>{
+		document.querySelector("#Home h1").style.marginTop = `${window.scrollY * 1.5}px`
+		document.querySelector("#Mountain1").style.marginBottom = `${106 - window.scrollY}px`
+		document.querySelector("#leftCloud").style.marginLeft = `-${window.scrollY}px`
+		document.querySelector("#mainCloud").style.marginTop = `-${window.scrollY}px`
+		document.querySelector("#rightCloud").style.marginRight = `-${window.scrollY}px`
+})
 	</script>
 	
-	</section>
+	<!-- </section> -->
 </body>
 </html>

@@ -1,17 +1,27 @@
+window.addEventListener('scroll', function() {
+    var terceraImagen = document.querySelector('.terceraImagen').getBoundingClientRect();
+    var logoCactusTree = document.querySelector('.logoCactusTree');
+
+    if (window.scrollY >= terceraImagen.top) {
+        logoCactusTree.style.zIndex = '0';
+    } else {
+        logoCactusTree.style.zIndex = '1000';
+    }
+});
 
     document.addEventListener('DOMContentLoaded', function() {
 
-        grained('#granulado-container', {
-            animate: true,
-            patternWidth: 100,
-            patternHeight: 100,
-            grainOpacity: 0.02,
-            grainDensity: 1,
-            grainWidth: 1,
-            grainHeight: 1,
-            grainChaos: 2,
-            grainSpeed: 100
-        });
+        // grained('#granulado-container', {
+        //     animate: true,
+        //     patternWidth: 100,
+        //     patternHeight: 100,
+        //     grainOpacity: .04,
+        //     grainDensity: 1,
+        //     grainWidth: 1,
+        //     grainHeight: 1,
+        //     grainChaos: 2,
+        //     grainSpeed: 100
+        // });
 
         var loader = document.getElementById("preloader");
         var introShown = document.cookie.indexOf('introShown=true') !== -1;
