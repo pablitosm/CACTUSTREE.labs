@@ -1,14 +1,3 @@
-// window.addEventListener('scroll', function() {
-//     var terceraImagen = document.querySelector('.terceraImagen').getBoundingClientRect();
-//     var logoCactusTree = document.querySelector('.logoCactusTree');
-
-//     if (window.scrollY >= terceraImagen.top) {
-//         logoCactusTree.style.zIndex = '0';
-//     } else {
-//         logoCactusTree.style.zIndex = '1000';
-//     }
-// });
-
 function playVideo(video) {
     video.currentTime = 0;
     video.play();
@@ -32,40 +21,72 @@ window.addEventListener(("scroll"),()=>{
 })
 
 function enviarFormulario() {
+    // Obtener los datos del formulario
     var formData = $("#miFormulario").serialize();
 
-    $.ajax({
-        type: "POST",
-        url: "https://api.web3forms.com/submit",
-        data: formData,
-        success: function(response) {
-            // Manejar la respuesta aquí
-            console.log(response);
-            // Muestra el mensaje de éxito
-            $("#mensajeExito").show();
-            // Deshabilita el botón para evitar envíos adicionales
-            $("#miFormulario :input").prop("disabled", true);
-        },
-        error: function(error) {
-            // Manejar errores aquí
-            console.error(error);
+    // Validar que todos los campos estén llenos
+    if (formIsValid()) {
+        // Desactivar el botón para evitar envíos adicionales
+        $("#miFormulario :input").prop("disabled", true);
+
+        // Realizar la solicitud AJAX
+        $.ajax({
+            type: "POST",
+            url: "https://api.web3forms.com/submit",
+            data: formData,
+
+            success: function(xhr, status, error) {
+                console.error("Error:", xhr.responseText, status, error);
+            },
+            error: function(response) {
+                // Manejar la respuesta aquí
+                console.log(response);
+                // Muestra el mensaje de éxito
+                $("#mensajeExito").show();
+            },
+            complete: function() {
+                // Reactivar el botón después de que se complete la solicitud
+                $("#miFormulario :input").prop("disabled", false);
+                
+                // Vaciar los campos del formulario
+                $("#miFormulario")[0].reset();
+            }
+        });
+    } else {
+        // Mostrar un mensaje de error o realizar otras acciones si el formulario no es válido
+        console.log("Error: Todos los campos deben estar llenos");
+    }
+}
+
+// Función para validar que todos los campos del formulario estén llenos
+function formIsValid() {
+    var isValid = true;
+    
+    // Verificar cada campo del formulario
+    $("#miFormulario :input[required]").each(function() {
+        if ($(this).val() === "") {
+            isValid = false;
+            return false; // Salir del bucle si un campo está vacío
         }
     });
+
+    return isValid;
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // grained('#granulado-container', {
-    //     animate: true,
-    //     patternWidth: 100,
-    //     patternHeight: 100,
-    //     grainOpacity: .04,
-    //     grainDensity: 1,
-    //     grainWidth: 1,
-    //     grainHeight: 1,
-    //     grainChaos: 2,
-    //     grainSpeed: 100
-    // });
+    grained('#granulado-container', {
+        animate: true,
+        patternWidth: 100,
+        patternHeight: 100,
+        grainOpacity: 0.04,
+        grainDensity: 1,
+        grainWidth: 1,
+        grainHeight: 1,
+        grainChaos: 2,
+        grainSpeed: 100
+    });
 
     var loader = document.getElementById("preloader");
     var introShown = document.cookie.indexOf('introShown=true') !== -1;
@@ -109,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
             textElement.style.display = "block";
 
             // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "zero";
+            textElement.innerText = "intro";
 
             // Ajustar la posición del texto con un retardo
             setTimeout(() => {
@@ -122,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
             textElement.style.display = "block";
 
             // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "intro";
+            textElement.innerText = "zero";
 
             // Ajustar la posición del texto con un retardo
             setTimeout(() => {
@@ -135,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
             textElement.style.display = "block";
 
             // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "ski lodge";
+            textElement.innerText = "proximamente";
 
             // Ajustar la posición del texto con un retardo
             setTimeout(() => {
@@ -143,33 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 textElement.style.left = `${x}px`;
                 textElement.style.top = `${y - offset}px`;
             }, 100);
-        } else if (isCursorOverElement(e, momentoUno)) {
-            // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
-            textElement.style.display = "block";
-
-            // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "momento 1";
-
-            // Ajustar la posición del texto con un retardo
-            setTimeout(() => {
-                const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
-                textElement.style.left = `${x}px`;
-                textElement.style.top = `${y - offset}px`;
-            }, 100);
-        } else if (isCursorOverElement(e, momentoDos)) {
-            // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
-            textElement.style.display = "block";
-
-            // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "momento 2";
-
-            // Ajustar la posición del texto con un retardo
-            setTimeout(() => {
-                const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
-                textElement.style.left = `${x}px`;
-                textElement.style.top = `${y - offset}px`;
-            }, 100);
-        } else {
+        }  else {
             // Si el cursor está fuera del área de "terceraImagen", ocultar el custom-text
             textElement.style.display = "none";
         }
@@ -224,16 +219,17 @@ document.addEventListener("DOMContentLoaded", function () {
     var menuItems = document.querySelectorAll(".navbar a");
 
     function updateActiveMenuItem() {
-        var scrollPosition = window.scrollY;
-
+        var windowHeight = window.innerHeight;
+        var scrollPosition = window.scrollY + windowHeight / 2;
+    
         menuItems.forEach(function (menuItem) {
             var targetId = menuItem.getAttribute("href").substring(1);
             var targetSection = document.getElementById(targetId);
-
-            if (
-                targetSection.offsetTop <= scrollPosition &&
-                targetSection.offsetTop + targetSection.offsetHeight > scrollPosition
-            ) {
+    
+            var sectionTop = targetSection.offsetTop;
+            var sectionBottom = sectionTop + targetSection.offsetHeight;
+    
+            if (sectionTop <= scrollPosition && sectionBottom > scrollPosition) {
                 // Agregar la clase 'active' al elemento del menú correspondiente
                 menuItem.parentElement.classList.add("active", "fadeIn");
                 menuItem.classList.add("active"); // Agregar la clase 'active' al enlace
@@ -244,6 +240,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    
+    // Llama a la función cuando se desplaza o carga la página
+    window.addEventListener("scroll", updateActiveMenuItem);
+    window.addEventListener("load", updateActiveMenuItem);
+    
 
     window.addEventListener("scroll", updateActiveMenuItem);
     window.addEventListener("load", updateActiveMenuItem);
@@ -263,3 +264,57 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// window.addEventListener('scroll', function() {
+//     var terceraImagen = document.querySelector('.terceraImagen').getBoundingClientRect();
+//     var logoCactusTree = document.querySelector('.logoCactusTree');
+
+//     if (window.scrollY >= terceraImagen.top) {
+//         logoCactusTree.style.zIndex = '0';
+//     } else {
+//         logoCactusTree.style.zIndex = '1000';
+//     }
+// });
+
+// else if (isCursorOverElement(e, momentoUno)) {
+//     // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+//     textElement.style.display = "block";
+
+//     // Puedes cambiar el texto dependiendo de tus necesidades
+//     textElement.innerText = "momento 1";
+
+//     // Ajustar la posición del texto con un retardo
+//     setTimeout(() => {
+//         const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+//         textElement.style.left = `${x}px`;
+//         textElement.style.top = `${y - offset}px`;
+//     }, 100);
+// } else if (isCursorOverElement(e, momentoDos)) {
+//     // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+//     textElement.style.display = "block";
+
+//     // Puedes cambiar el texto dependiendo de tus necesidades
+//     textElement.innerText = "momento 2";
+
+//     // Ajustar la posición del texto con un retardo
+//     setTimeout(() => {
+//         const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+//         textElement.style.left = `${x}px`;
+//         textElement.style.top = `${y - offset}px`;
+//     }, 100);
+// }
+
+// const images = document.querySelectorAll('.art img');
+// const modal = document.getElementById('modal');
+// const modalImg = document.getElementById('modalImg');
+
+// images.forEach(img => {
+// 	img.addEventListener('click', () => {
+// 		modal.style.display = 'flex';
+// 		modalImg.src = img.src;
+// 	});
+// });
+
+// modal.addEventListener('click', () => {
+// 	modal.style.display = 'none';
+// });

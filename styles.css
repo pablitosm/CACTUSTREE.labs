@@ -167,7 +167,7 @@ nav ul li a:hover {
 }
 
 .textLogo {
-    font-size: 2vw;
+    font-size: 4vh;
 }
 
 .mail {
@@ -391,8 +391,7 @@ footer {
 }
 .ceroImagen,
 .primeraImagen,
-.segundaImagen,
-.quintaImagen {
+.segundaImagen {
     /* background-color: #0e1111; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -416,15 +415,12 @@ footer {
 }
 
 .quintaImagen {
-    z-index: 1000000;
-    /* background-image: url("../img/about/4_1.2-min.jpeg"); */
-    background-color: #0f1414;
-    /* background-color: #4f9898; */
-
+    /* background-color: wheat; */
+    background-color: #F4F4DE;
 }
 
 .sextaImagen {
-    z-index: 1000000;
+    /* z-index: 1000000; */
     background-color: #0e1111;
     /* background-color: #ac26cd; */
     display: flex;
@@ -455,6 +451,31 @@ footer {
     mix-blend-mode: difference;
     pointer-events: none;
     z-index: 10000000000000000000 /* xdddddddddd  cambiar todos los index*/;
+}
+
+.projects,
+.moments {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foto,
+.foto1 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.foto img,
+.foto1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
 .navbar {
@@ -563,7 +584,7 @@ footer {
     }
 
     .textLogo {
-        font-size: 5vw;
+        font-size: 7vw;
         /* font-size: 4vw; */
     }
     
@@ -671,6 +692,21 @@ footer {
     }
 
     .movileVersion {
+        display: none;
+    }
+
+    .container-Art img {
+        width: calc(20% - 10px) !important; /* El 50% del ancho de su contenedor menos el margen */
+        height: 39vh;
+        object-fit: cover; /* Recortar y hacer zoom para que la imagen sea cuadrada */
+        margin-bottom: 10px; /* Margen inferior para separar las filas */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #leftCloud, 
+    #leftCloud1,
+    #leftCloud2,
+    #rightCloud {
         display: none;
     }
 }
@@ -822,6 +858,7 @@ footer {
 }
 
 #granulado-container {
+    /* por encima de todo */
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -875,7 +912,6 @@ section {
 #Home h1 {
     color: red;
     position: absolute;
-    font-size: 50px;
     z-index: 2;
     margin-top: 10px;
 }
@@ -958,8 +994,10 @@ section {
 }
 
 .wrapper{
+    top: 25vh;
+    left: 15vh;
     display: flex;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     position: relative;
 }
 .wrapper i{
@@ -977,19 +1015,24 @@ section {
     transform: translateY(-50%);
     transition: transform 0.1s linear;
 }
+
 .wrapper i:active{
     transform: translateY(-50%) scale(0.9);
 }
+
 .wrapper i:hover{
     background: #f2f2f2;
 }
+
 .wrapper i:first-child{
     left: -22px;
     display: none;
 }
+
 .wrapper i:last-child{
     right: -22px;
 }
+
 .wrapper .carousel{
     font-size: 0px;
     cursor: pointer;
@@ -997,13 +1040,16 @@ section {
     white-space: nowrap;
     scroll-behavior: smooth;
 }
+
 .carousel.dragging{
     cursor: grab;
     scroll-behavior: auto;
 }
+
 .carousel.dragging img{
     pointer-events: none;
 }
+
 .carousel img{
     height: 340px;
     object-fit: cover;
@@ -1011,6 +1057,7 @@ section {
     margin-left: 14px;
     width: calc(100% / 3);
 }
+
 .carousel img:first-child{
     margin-left: 0px;
 }
@@ -1088,4 +1135,23 @@ input[type="button"]:hover {
 input:hover,
 textarea:hover {
     border-bottom: 2px solid #6b0000; /* Línea inferior roja al hacer hover */
+}
+
+.container-Art {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espacio entre las columnas */
+    margin: 10px; /* Margen general */
+}
+
+.container-Art img {
+    width: calc(20% - 10px); /* El 50% del ancho de su contenedor menos el margen */
+    height: 39vh;
+    object-fit: cover; /* Recortar y hacer zoom para que la imagen sea cuadrada */
+    margin-bottom: 10px; /* Margen inferior para separar las filas */
+    transition: transform 0.3s ease-in-out;
+}
+
+.container-Art img:hover {
+    transform: scale(1.09);
 }

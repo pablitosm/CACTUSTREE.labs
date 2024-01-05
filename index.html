@@ -17,11 +17,13 @@
 
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://web3forms.com/client/script.js" async defer></script>
 
     <title>CACTUSTREE.labs</title>
 </head>
 <body class="bodyIndex" id="body">
-	<!-- <section id="granulado-container"> -->
+	<section id="granulado-container">
+	</section>
 
 	<div id="preloader">
 		<video autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
@@ -35,7 +37,7 @@
 			<nav>
 				<ul>
 					<li><a href="#projects">PROJECTS</a></li>
-					<li><a href="#moments">MOMENTS</a></li>
+					<!-- <li><a href="#moments">MOMENTS</a></li> -->
 					<li><a href="#art">ART</a></li>
 					<li><a href="#contact">CONTACT</a></li>
 				</ul>
@@ -77,7 +79,7 @@
 		<div class="navbar">
 			<ul>
 				<li><a href="#projects" data-section-name="PROJECTS"></a><div class="section-name">Proyectos</div></li>
-				<li><a href="#moments" data-section-name="MOMENTS"></a><div class="section-name">Momentos</div></li>
+				<!-- <li><a href="#moments" data-section-name="MOMENTS"></a><div class="section-name">Momentos</div></li> -->
 				<li><a href="#art" data-section-name="ART"></a><div class="section-name">Arte</div></li>
 				<li><a href="#contact" data-section-name="CONTACT"></a><div class="section-name">Contacto</div></li>
 			</ul>
@@ -88,13 +90,13 @@
 	<div class="projects terceraImagen" id="projects">
 		<div class="fila" id="contenido3">
 			<div class="foto" id="projects1">
-				<a href="./proyectos/zero">
+				<a href="./proyectos/intro">
 					<div class="imagen1">
-						<img src="./img/webp_images/index/web_1.7.1.webp" alt="">
+						<img src="./img/webp_images/index/intro_1.1.3.webp" alt="">
 					</div>
 					<div class="imagen1-hover">
 						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
-							<source src="./media/teaser pagina web.mp4" type="video/mp4">
+							<source src="./media/teaser intro.mp4" type="video/mp4">
 						</video>
 						<!-- <div class="overlay-arriba">
 							<span class="overlay-text"><p>zer&oslash;:</p></span>
@@ -106,38 +108,43 @@
 				</a>
 			</div>
 			<div class="foto" id="projects2">
-				<a href="./proyectos/intro">
+				<a href="./proyectos/zero">
 					<div class="imagen1">
-						<img src="./img/webp_images/index/intro_1.1.3.webp" alt="">
+						<img src="./img/webp_images/index/web_1.7.1.webp" alt="">
 					</div>
 					<div class="imagen1-hover">
 						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
-							<source src="./media/teaser intro.mp4" type="video/mp4">
+							<source src="./media/teaser pagina web.mp4" type="video/mp4">
 						</video>
 						<!-- <span class="overlay-text overlay-text-mid"><p>Intro</p></span> -->
 					</div>
 				</a>
 			</div>
-			<div class="foto1" id="projects3">
-				<a href="./proyectos/ski">
-					<div class="imagen3">
+			<div class="foto" id="projects3">
+				<!-- <a href="./proyectos/ski"> -->
+					<div class="imagen1">
 						<img src="./img/webp_images/index/the ultimate backcountry ski lodge_2.4.2.webp" alt="">
-						<!-- <span class="overlay-text overlay-text-mid align-mid">the ultimate backcountry ski lodge</span> -->
 					</div>
-				</a>
+					<div class="imagen1-hover">
+						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
+							<source src="./media/proximamaente 3.mp4" type="video/mp4">
+						</video>
+						<!-- <span class="overlay-text overlay-text-mid"><p>Intro</p></span> -->
+					</div>
+				<!-- </a> -->
 			</div>
 		</div>
 	</div>
 	
 	<!-- <p>In this website you can see some of my freelance work, if you are interested in working with me, write me or contact me through the contact section.</p> -->
 	<!-- DIV MOMENTOS -->
-	<div class="moments cuartaImagen" id="moments">
+	<!-- <div class="moments cuartaImagen" id="moments">
 		<div class="fila" id="contenido3">
 			<div class="foto1" id="moment1">
 				<a href="./momentos/momento1">
 					<div class="imagen1">
 						<img src="./img/webp_images/index/momento1.webp" alt="">
-						<!-- <span class="overlay-text">"momento 1"</span> -->
+						<span class="overlay-text">"momento 1"</span>
 					</div>
 				</a>
 			</div>
@@ -145,52 +152,51 @@
 				<a href="./momentos/momento2">
 					<div class="imagen2">
 						<img src="./img/webp_images/index/momento2.webp" alt="">
-						<!-- <span class="overlay-text">"momento 2"</span> -->
+						<span class="overlay-text">"momento 2"</span>
 					</div>
 				</a>
 			</div>
 		</div>		
-	</div>
+	</div> -->
 
 	<!-- DIV ARTE -->
 	<div class="art quintaImagen" id="art">
-		<div class="centered-text">
-			<!-- <div class="wrapper">
-				<i id="left" class="fa-solid fa-angle-left"></i>
-				<div class="carousel">
-				  <img src="./img/art/1.jpg" alt="img" draggable="false">
-				  <img src="./img/art/2.jpg" alt="img" draggable="false">
-				  <img src="./img/art/3.jpg" alt="img" draggable="false">
-				  <img src="./img/art/4.jpg" alt="img" draggable="false">
-				  <img src="./img/art/5.jpg" alt="img" draggable="false">
-				  <img src="./img/art/6.jpg" alt="img" draggable="false">
-				  <img src="./img/art/7.jpg" alt="img" draggable="false">
-				  <img src="./img/art/8.jpg" alt="img" draggable="false">
-				  <img src="./img/art/9.jpg" alt="img" draggable="false">
-				  <img src="./img/art/10.jpg" alt="img" draggable="false">
-				  <img src="./img/art/11.jpg" alt="img" draggable="false">
-				  <img src="./img/art/12.jpg" alt="img" draggable="false">
-				  <img src="./img/art/13.jpg" alt="img" draggable="false">
-				  <img src="./img/art/14.jpg" alt="img" draggable="false">
-				  <img src="./img/art/15.jpg" alt="img" draggable="false">
-				  <img src="./img/art/16.png" alt="img" draggable="false">
-				  <img src="./img/art/17.jpg" alt="img" draggable="false">
-				  <img src="./img/art/18.png" alt="img" draggable="false">
-				  <img src="./img/art/19.jpg" alt="img" draggable="false">
-				  <img src="./img/art/20.jpg" alt="img" draggable="false">
-				  <img src="./img/art/21.jpg" alt="img" draggable="false">
-				  <img src="./img/art/22.jpg" alt="img" draggable="false">
-				  <img src="./img/art/23.jpg" alt="img" draggable="false">
-				  <img src="./img/art/24.jpg" alt="img" draggable="false">
-				  <img src="./img/art/25.jpg" alt="img" draggable="false">
-				  <img src="./img/art/26.JPG" alt="img" draggable="false">
-				  <img src="./img/art/27.jpg" alt="img" draggable="false">
-				  <img src="./img/art/28.jpg" alt="img" draggable="false">
-				  <img src="./img/art/29.jpg" alt="img" draggable="false">
-				</div>
-				<i id="right" class="fa-solid fa-angle-right"></i>
-			  </div> -->
+		<div class="container-Art">
+
+			<img src="./img/webp_images/web34/1-21.jpg" data-uncompressed="./img/webp_images/fotos web/1-21.jpg" alt="">
+			<img src="./img/webp_images/web34/1-22.jpg" data-uncompressed="./img/webp_images/fotos web/1-22.jpg" alt="">
+			<img src="./img/webp_images/web34/1-23.jpg" data-uncompressed="./img/webp_images/fotos web/1-23.jpg" alt="">
+			<img src="./img/webp_images/web34/1-24.jpg" data-uncompressed="./img/webp_images/fotos web/1-24.png" alt="">
+			<img src="./img/webp_images/web34/1-25.jpg" data-uncompressed="./img/webp_images/fotos web/1-25.png" alt="">
+
+			<img src="./img/webp_images/web34/1-6.jpg" data-uncompressed="./img/webp_images/fotos web/1-6.jpg" alt="">
+			<img src="./img/webp_images/web34/1-7.jpg" data-uncompressed="./img/webp_images/fotos web/1-7.jpg" alt="">
+			<img src="./img/webp_images/web34/1-8.jpg" data-uncompressed="./img/webp_images/fotos web/1-8.jpg" alt="">
+			<img src="./img/webp_images/web34/1-9.jpg" data-uncompressed="./img/webp_images/fotos web/1-9.jpg" alt="">
+			<img src="./img/webp_images/web34/1-10.jpg" data-uncompressed="./img/webp_images/fotos web/1-10.jpg" alt="">
+			
+			<img src="./img/webp_images/web34/1.jpg" data-uncompressed="./img/webp_images/fotos web/1.jpg" alt="">
+			<img src="./img/webp_images/web34/1-12.jpg" data-uncompressed="./img/webp_images/fotos web/1-12.jpg" alt="">
+			<img src="./img/webp_images/web34/1-5.jpg" data-uncompressed="./img/webp_images/fotos web/1-5.JPG" alt="">
+			<img src="./img/webp_images/web34/1-14.jpg" data-uncompressed="./img/webp_images/fotos web/1-14.jpg" alt="">
+			<img src="./img/webp_images/web34/1-15.jpg" data-uncompressed="./img/webp_images/fotos web/1-15.jpg" alt="">
+
+			<img src="./img/webp_images/web34/1-16.jpg" data-uncompressed="./img/webp_images/fotos web/1-16.jpg" alt="">
+			<img src="./img/webp_images/web34/1-17.jpg" data-uncompressed="./img/webp_images/fotos web/1-17.jpg" alt="">
+			<img src="./img/webp_images/web34/1-18.jpg" data-uncompressed="./img/webp_images/fotos web/1-18.jpg" alt="">
+			<img src="./img/webp_images/web34/1-19.jpg" data-uncompressed="./img/webp_images/fotos web/1-19.jpg" alt="">
+			<img src="./img/webp_images/web34/1-20.jpg" data-uncompressed="./img/webp_images/fotos web/1-20.jpg" alt="">
+
+			<img src="./img/webp_images/web34/1-11.jpg" data-uncompressed="./img/webp_images/fotos web/1-11.jpg" alt="">
+			<img src="./img/webp_images/web34/1-2.jpg" data-uncompressed="./img/webp_images/fotos web/1-2.jpg" alt="">
+			<img src="./img/webp_images/web34/1-3.jpg" data-uncompressed="./img/webp_images/fotos web/1-3.jpg" alt="">
+			<img src="./img/webp_images/web34/1-4.jpg" data-uncompressed="./img/webp_images/fotos web/1-4.jpg" alt="">
+			<img src="./img/webp_images/web34/1-13.jpg" data-uncompressed="./img/webp_images/fotos web/1-13.jpg" alt="">
 		</div>
+	</div>
+	
+	<div class="modal" id="modal">
+		<img src="" alt="" id="modalImg">
 	</div>
 
 	<!-- DIV CONTACTO -->
@@ -213,8 +219,8 @@
 						<p>Por eso, he creado <b>CACTUSTREE.labs&#8482;</b>, para mí el audiovisual
 						es una manera más de expresarme y por eso, intento que
 						todos mis clientes estén satisfechos con el trabajo que realizo</p><br>
-						<p>Teléfono: <b>644 23 45 76</b></p>
-						<p>Email: <b>hi@cactustreelabs.com</b></p>
+						<p>Teléfono: <b>+34 692 94 81 26</b></p>
+						<p>Email: <b>info@cactustreelabs.com</b></p>
 					</div>
 					<!-- <img class="movileVersion" src="./img/principal/Recurso 36LOGO FINAL.png" alt="">
 					<img class="imageBlanca movileVersion" src="./img/principal/Recurso 37LOGO FINAL.png" alt=""> -->
@@ -223,15 +229,19 @@
 					<h2>Contacto</h2>
 					<form id="miFormulario" method="POST">
 						<input type="hidden" name="access_key" value="0761ef7d-af07-4a95-aff0-4ba8b5473cc7">
-						<label for="nombre"></label>
+						<!-- <input type="hidden" name="access_key" value="866e4256-a00f-4cad-a2fe-31b3cdfb045a"> -->
+						<input type="hidden" name="subject" value="Formulario de contacto">
+						<input type="hidden" name="from_name" value="cactustree.labs">
+						<!-- <input type="hidden" name="redirect" value="https://web3forms.com/success">						 -->
 						<input type="text" name="nombre" id="nombre" placeholder="Nombre" autocomplete="given-name" required>
 						<label for="email"></label>
 						<input type="email" name="email" id="email" placeholder="Email" autocomplete="email" required>
 						<label for="mensaje"></label>
 						<textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
-						<div class="g-recaptcha" data-sitekey="6Lfd_UMpAAAAAOioJNPAqLzXDLzSpvpJq0R4ablH"></div>
+						<!-- <div class="g-recaptcha" data-sitekey="6Lfd_UMpAAAAAOioJNPAqLzXDLzSpvpJq0R4ablH"></div> -->
+						<div class="h-captcha" data-captcha="true"></div>
 						<!-- <input type="button" value="Enviar" onclick="enviarFormulario()">  -->
-						<input type="button" value="Enviar" onclick="enviarFormulario()">	
+						<input type="submit" value="Enviar" onclick="enviarFormulario()">	
 						<p id="mensajeExito" style="display: none; color: green;">¡Formulario enviado con éxito!</p>
 					</form>
 				</td>
@@ -249,8 +259,63 @@
 
 	<!-- <script src="./js/index.js"></script>  -->
 	<script src="index.js"></script> 
-	<!-- <script src="./js/grained.js"></script> -->
+	<script src="./js/grained.js"></script>
 	
-	<!-- </section> -->
+	<script>    
+		document.querySelectorAll('.container-Art img').forEach(img => {
+			img.addEventListener('click', function() {
+				const imgSrc = this.getAttribute('data-uncompressed');
+				const bigImg = document.createElement('img');
+				bigImg.src = imgSrc;
+				bigImg.style.position = 'fixed';
+				bigImg.style.zIndex = '1000';
+				bigImg.style.width = '100%';
+				bigImg.style.height = '100%';
+				bigImg.style.objectFit = 'contain';
+				bigImg.style.top = '0';
+				bigImg.style.left = '0';
+				bigImg.style.backgroundColor = 'rgba(255,255,255,0.8)';
+				bigImg.addEventListener('click', function() {
+					document.body.removeChild(bigImg);
+				});
+				document.body.appendChild(bigImg);
+			});
+		});
+	</script>
 </body>
 </html>
+
+
+<!-- <div class="wrapper">
+			<i id="left" class="fa-solid fa-angle-left"></i>
+			<div class="carousel">
+				<img src="./img/art/1.jpg" alt="img" draggable="false">
+				<img src="./img/art/2.jpg" alt="img" draggable="false">
+				<img src="./img/art/3.jpg" alt="img" draggable="false">
+				<img src="./img/art/4.jpg" alt="img" draggable="false">
+				<img src="./img/art/5.jpg" alt="img" draggable="false">
+				<img src="./img/art/6.jpg" alt="img" draggable="false">
+				<img src="./img/art/7.jpg" alt="img" draggable="false">
+				<img src="./img/art/8.jpg" alt="img" draggable="false">
+				<img src="./img/art/9.jpg" alt="img" draggable="false">
+				<img src="./img/art/10.jpg" alt="img" draggable="false">
+				<img src="./img/art/11.jpg" alt="img" draggable="false">
+				<img src="./img/art/12.jpg" alt="img" draggable="false">
+				<img src="./img/art/13.jpg" alt="img" draggable="false">
+				<img src="./img/art/14.jpg" alt="img" draggable="false">
+				<img src="./img/art/15.jpg" alt="img" draggable="false">
+				<img src="./img/art/16.png" alt="img" draggable="false">
+				<img src="./img/art/17.jpg" alt="img" draggable="false">
+				<img src="./img/art/18.png" alt="img" draggable="false">
+				<img src="./img/art/19.jpg" alt="img" draggable="false">
+				<img src="./img/art/20.jpg" alt="img" draggable="false">
+				<img src="./img/art/21.jpg" alt="img" draggable="false">
+				<img src="./img/art/22.jpg" alt="img" draggable="false">
+				<img src="./img/art/23.jpg" alt="img" draggable="false">
+				<img src="./img/art/24.jpg" alt="img" draggable="false">
+				<img src="./img/art/25.jpg" alt="img" draggable="false">
+				<img src="./img/art/26.JPG" alt="img" draggable="false">
+				<img src="./img/art/28.jpg" alt="img" draggable="false">
+			</div>
+			<i id="right" class="fa-solid fa-angle-right"></i>
+		</div> -->
