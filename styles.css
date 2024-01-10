@@ -1,6 +1,9 @@
+@import url('./css/clash-display.css');
+
 html {
     scroll-behavior: smooth;
     color: #f4f4de;
+    cursor: none;
 
 }
 
@@ -12,6 +15,7 @@ body {
     /* --color-fondo: #d9e9c7; */
     --color-fondo: #FF0000;
     --color-texto: #F4F4DE;
+    --color-pieFoto: #e3e3d0;
 }
 
 * {
@@ -416,7 +420,8 @@ footer {
 
 .quintaImagen {
     /* background-color: wheat; */
-    background-color: #F4F4DE;
+    /* background-color: #F4F4DE; */
+    background-color: #0e1111;
 }
 
 .sextaImagen {
@@ -790,13 +795,25 @@ footer {
 }
 
 .foto1 img,
-.foto2 img {
+.foto2 img
+{
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
+.foto-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las imágenes */
+}
+
+.foto3 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
 
 .foto1:hover .overlay-text,
 .foto2:hover .overlay-text {
@@ -1079,12 +1096,12 @@ section {
     width: 45vh;
 }
 
-table {
-    width: 95%;
+.tableIndex {
+    width: 100%;
     border-collapse: collapse;
 }
 
-td {
+.tableIndex td {
     padding: 20px;
     /* border: 1px solid red; */
     width: 50%;
@@ -1117,7 +1134,7 @@ textarea {
     transition: border-bottom 0.3s ease;
 }
 
-input[type="button"] {
+input[type="submit"] {
     background-color: red; /* Rojo oscuro */
     color: #fff; /* Texto blanco */
     cursor: pointer;
@@ -1154,4 +1171,53 @@ textarea:hover {
 
 .container-Art img:hover {
     transform: scale(1.09);
+}
+
+.titulo2Texto {
+    font-family: 'ClashDisplay-Bold';
+    font-size: 8vh;
+    text-align: center;
+}
+
+.pieFoto {
+    color: var(--color-pieFoto);
+    text-align: center;
+    font-size: 1.8vh;
+    padding-bottom: 6vh;
+}
+
+.textoGrande {
+    font-family: 'ClashDisplay-Semibold';
+    font-size: 3vh;
+    /* text-align: center; */
+}
+
+.textoMid p{
+    font-family: 'ClashDisplay-Regular';
+    font-size: 2.5vh;
+}
+
+.textoMidNegrita {
+    font-family: 'ClashDisplay-Bold';
+    font-size: 2.5vh;
+}
+
+.tableIntro {
+    width: 50%;
+    border-collapse: collapse;
+    /* centrame la tabla */
+    margin-left: 60vh;
+    
+}
+
+.tableIntro td {
+    /* padding: 20px; */
+    /* border: 1px solid red; */
+    width: 50%;
+    padding-top: 20px;
+}
+
+.textTableIntro {
+    margin: 0;
+    padding: 0;
 }

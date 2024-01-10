@@ -25,7 +25,13 @@
     RewriteRule ^momentos/([^\.]+)$ html/momentos/$1.html [NC,L]
 
     # Restringir el acceso a la página de desarrollo
+    # pablo
     RewriteCond %{REMOTE_ADDR} !^88\.7\.59\.196$
+    # arturo
+    RewriteCond %{REMOTE_ADDR} !^84\.78\.252\.214$
+    # pablo clase
+    RewriteCond %{REMOTE_ADDR} !^80\.35\.42\.231$
+
     RewriteCond %{REQUEST_URI} !^/closed(\.html)?$
     RewriteRule ^(.*)$ /closed$1 [R=302,L]
 </IfModule>
