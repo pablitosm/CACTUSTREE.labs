@@ -9,7 +9,6 @@ function onSubmit(token) {
 
 window.addEventListener(("scroll"),()=>{
     document.querySelector("#Home h1").style.marginTop = `${window.scrollY * 1.5}px`
-    // document.querySelector("#centerImage").style.marginTop = `${window.scrollY * 0.8}px`
     document.querySelector("#Mountain1").style.marginBottom = `${106 - window.scrollY}px`
     document.querySelector("#leftCloud").style.marginLeft = `-${window.scrollY}px`
     document.querySelector("#leftCloud1").style.marginLeft = `-${window.scrollY}px`
@@ -19,6 +18,26 @@ window.addEventListener(("scroll"),()=>{
     document.querySelector("#rightCloud").style.marginRight = `-${window.scrollY}px`
     document.querySelector("#rightCloud1").style.marginRight = `-${window.scrollY}px`
 })
+
+document.querySelectorAll('.container-Art img').forEach(img => {
+    img.addEventListener('click', function() {
+        const imgSrc = this.getAttribute('data-uncompressed');
+        const bigImg = document.createElement('img');
+        bigImg.src = imgSrc;
+        bigImg.style.position = 'fixed';
+        bigImg.style.zIndex = '1000';
+        bigImg.style.width = '100%';
+        bigImg.style.height = '100%';
+        bigImg.style.objectFit = 'contain';
+        bigImg.style.top = '0';
+        bigImg.style.left = '0';
+        bigImg.style.backgroundColor = 'rgba(0,0,0,0.8)';
+        bigImg.addEventListener('click', function() {
+            document.body.removeChild(bigImg);
+        });
+        document.body.appendChild(bigImg);
+    });
+});
 
 function enviarFormulario() {
     // Obtener los datos del formulario

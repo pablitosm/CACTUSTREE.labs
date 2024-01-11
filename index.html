@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="./css/styles.css"> -->
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.cdnfonts.com/css/nt-wagner" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/glossy-personal-use" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
@@ -244,29 +244,11 @@
 	</footer>	
 
 	<!-- <script src="./js/index.js"></script>  -->
-	<script src="index.js"></script> 
+	<script src="./js/index.js"></script> 
 	<script src="./js/grained.js"></script>
 	
 	<script>    
-		document.querySelectorAll('.container-Art img').forEach(img => {
-			img.addEventListener('click', function() {
-				const imgSrc = this.getAttribute('data-uncompressed');
-				const bigImg = document.createElement('img');
-				bigImg.src = imgSrc;
-				bigImg.style.position = 'fixed';
-				bigImg.style.zIndex = '1000';
-				bigImg.style.width = '100%';
-				bigImg.style.height = '100%';
-				bigImg.style.objectFit = 'contain';
-				bigImg.style.top = '0';
-				bigImg.style.left = '0';
-				bigImg.style.backgroundColor = 'rgba(0,0,0,0.8)';
-				bigImg.addEventListener('click', function() {
-					document.body.removeChild(bigImg);
-				});
-				document.body.appendChild(bigImg);
-			});
-		});
+		
 	</script>
 	<!-- </section> -->
 </body>
