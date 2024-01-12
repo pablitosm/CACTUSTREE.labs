@@ -1,3 +1,10 @@
+let toggle = document.getElementById("mode");
+
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    console.log("click");
+})
+
 function playVideo(video) {
     video.currentTime = 0;
     video.play();
@@ -31,7 +38,7 @@ document.querySelectorAll('.container-Art img').forEach(img => {
         bigImg.style.objectFit = 'contain';
         bigImg.style.top = '0';
         bigImg.style.left = '0';
-        bigImg.style.backgroundColor = 'rgba(0,0,0,0.8)';
+        bigImg.style.backgroundColor = 'var(--color-oscuro-LowOP)';
         bigImg.addEventListener('click', function() {
             document.body.removeChild(bigImg);
         });
@@ -104,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         grainWidth: 1,
         grainHeight: 1,
         grainChaos: 2,
-        grainSpeed: 100
+        grainSpeed: 10
     });
 
     var loader = document.getElementById("preloader");
@@ -175,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
             textElement.style.display = "block";
 
             // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "proximamente";
+            textElement.innerText = "tebay";
 
             // Ajustar la posición del texto con un retardo
             setTimeout(() => {
@@ -283,57 +290,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-// window.addEventListener('scroll', function() {
-//     var terceraImagen = document.querySelector('.terceraImagen').getBoundingClientRect();
-//     var logoCactusTree = document.querySelector('.logoCactusTree');
-
-//     if (window.scrollY >= terceraImagen.top) {
-//         logoCactusTree.style.zIndex = '0';
-//     } else {
-//         logoCactusTree.style.zIndex = '1000';
-//     }
-// });
-
-// else if (isCursorOverElement(e, momentoUno)) {
-//     // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
-//     textElement.style.display = "block";
-
-//     // Puedes cambiar el texto dependiendo de tus necesidades
-//     textElement.innerText = "momento 1";
-
-//     // Ajustar la posición del texto con un retardo
-//     setTimeout(() => {
-//         const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
-//         textElement.style.left = `${x}px`;
-//         textElement.style.top = `${y - offset}px`;
-//     }, 100);
-// } else if (isCursorOverElement(e, momentoDos)) {
-//     // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
-//     textElement.style.display = "block";
-
-//     // Puedes cambiar el texto dependiendo de tus necesidades
-//     textElement.innerText = "momento 2";
-
-//     // Ajustar la posición del texto con un retardo
-//     setTimeout(() => {
-//         const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
-//         textElement.style.left = `${x}px`;
-//         textElement.style.top = `${y - offset}px`;
-//     }, 100);
-// }
-
-// const images = document.querySelectorAll('.art img');
-// const modal = document.getElementById('modal');
-// const modalImg = document.getElementById('modalImg');
-
-// images.forEach(img => {
-// 	img.addEventListener('click', () => {
-// 		modal.style.display = 'flex';
-// 		modalImg.src = img.src;
-// 	});
-// });
-
-// modal.addEventListener('click', () => {
-// 	modal.style.display = 'none';
-// });

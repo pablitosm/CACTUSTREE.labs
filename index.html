@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- <link rel="stylesheet" href="./css/styles.css"> -->
 	<link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.cdnfonts.com/css/nt-wagner" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/glossy-personal-use" rel="stylesheet">
@@ -21,7 +20,7 @@
 
     <title>CACTUSTREE.labs</title>
 </head>
-<body class="bodyIndex" id="body">
+<body class="bodyIndex dark" id="body granulado-container">
 	<!-- <section id="granulado-container"> -->
 	<div id="preloader">
 		<video autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
@@ -31,13 +30,13 @@
 
 	<div id="contenido1" style="position: relative;">
 		<header style="position: absolute; top: 0; left: 0;">
-			<a href="https://google.com"><img class="logo" src="./img/principal/logo.png" alt=""></a>
+			<a href="https://cactustreelabs.com"><img class="logo" src="./img/principal/logo.png" alt=""></a>
 			<nav>
 				<ul>
 					<li><a href="#projects">PROJECTS</a></li>
-					<!-- <li><a href="#moments">MOMENTS</a></li> -->
 					<li><a href="#art">ART</a></li>
 					<li><a href="#contact">CONTACT</a></li>
+					<li><input type="checkbox" id="mode"></li>
 				</ul>
 			</nav>
 		</header>
@@ -84,12 +83,6 @@
 						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
 							<source src="./media/teaser intro.mp4" type="video/mp4">
 						</video>
-						<!-- <div class="overlay-arriba">
-							<span class="overlay-text"><p>zer&oslash;:</p></span>
-						</div>
-						<div class="overlay-abajo">
-							<span class="overlay-text-small"><p>a film only for dreamers</p></span>
-						</div> -->
 					</div>
 				</a>
 			</div>
@@ -102,12 +95,11 @@
 						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
 							<source src="./media/teaser pagina web.mp4" type="video/mp4">
 						</video>
-						<!-- <span class="overlay-text overlay-text-mid"><p>Intro</p></span> -->
 					</div>
 				</a>
 			</div>
 			<div class="foto" id="projects3">
-				<!-- <a href="./proyectos/ski"> -->
+				<a href="./proyectos/ski">
 					<div class="imagen1">
 						<img src="./img/webp_images/index/the ultimate backcountry ski lodge_2.4.2.webp" alt="">
 					</div>
@@ -115,36 +107,12 @@
 						<video autoplay muted loop playsinline style="width: 100%;" onmouseover="playVideo(this)">
 							<source src="./media/proximamaente 3.mp4" type="video/mp4">
 						</video>
-						<!-- <span class="overlay-text overlay-text-mid"><p>Intro</p></span> -->
 					</div>
-				<!-- </a> -->
+				</a>
 			</div>
 		</div>
 	</div>
 	
-	<!-- <p>In this website you can see some of my freelance work, if you are interested in working with me, write me or contact me through the contact section.</p> -->
-	<!-- DIV MOMENTOS -->
-	<!-- <div class="moments cuartaImagen" id="moments">
-		<div class="fila" id="contenido3">
-			<div class="foto1" id="moment1">
-				<a href="./momentos/momento1">
-					<div class="imagen1">
-						<img src="./img/webp_images/index/momento1.webp" alt="">
-						<span class="overlay-text">"momento 1"</span>
-					</div>
-				</a>
-			</div>
-			<div class="foto1" id="moment2">
-				<a href="./momentos/momento2">
-					<div class="imagen2">
-						<img src="./img/webp_images/index/momento2.webp" alt="">
-						<span class="overlay-text">"momento 2"</span>
-					</div>
-				</a>
-			</div>
-		</div>		
-	</div> -->
-
 	<!-- DIV ARTE -->
 	<div class="art quintaImagen" id="art">
 		<div class="container-Art">
@@ -181,9 +149,9 @@
 		</div>
 	</div>
 	
-	<div class="modal" id="modal">
+	<!-- <div class="modal" id="modal">
 		<img src="" alt="" id="modalImg">
-	</div>
+	</div> -->
 
 	<!-- DIV CONTACTO -->
 	<div class="contact sextaImagen" id="contact">
@@ -239,7 +207,7 @@
     <div class="custom-text"></div>
 
 	<footer>
-		<p>@CACTUSTREE.labs</p>
+		<p>CACTUSTREE.labs</p>
 		<a href="https://www.instagram.com/cactustree.labs/" target="_blank"><img class="imageFooter" src="./img/about/foto.png" alt=""></a>
 	</footer>	
 

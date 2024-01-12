@@ -1,21 +1,29 @@
 @import url('clash-display.css');
-
+@import url('Cralika.css');
 html {
     scroll-behavior: smooth;
-    color: #f4f4de;
+    /* color: var(--color-texto); */
     cursor: none;
-
 }
 
 body {
     overflow-x: hidden;
 }
 
-:root {
-    /* --color-fondo: #d9e9c7; */
-    --color-fondo: #FF0000;
+body.dark {
+    --color-oscuro: #0e1111;
     --color-texto: #F4F4DE;
     --color-pieFoto: #e3e3d0;
+    --color-oscuro-LowOP: rgba(14, 17, 17, 0.8); /* #0e1111 con 50% de opacidad */
+}
+
+:root {
+    --color-fondo: #FF0000;
+    --color-texto: #0e1111;
+    --color-oscuro: #F4F4DE;
+    --color-pieFoto: #0e1111;
+    --color-oscuro-LowOP: rgba(244, 244, 222, 0.8); /* #F4F4DE con 50% de opacidad */
+
 }
 
 * {
@@ -134,7 +142,7 @@ nav ul li a:hover {
 }
 
 .bodyProyecto1 {
-    background-color: #0e1111;
+    background-color: var(--color-oscuro);
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -202,7 +210,7 @@ nav ul li a:hover {
 .aboutArriba,
 .aboutMedio,
 .aboutAbajo {
-    color: #fff;
+    color: var(--color-texto);
     font-size: 3vh;
     width: 70%;
     margin: 0 0 0 10vh;
@@ -234,6 +242,10 @@ footer {
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+
+p {
+    color: var(--color-texto);
 }
 
 .pequegnito p {
@@ -339,7 +351,6 @@ footer {
     top: 0.3vh;
     right: 0.3vh;
     user-select: none;
-    pointer-events: none;
     z-index: 999999;
 }
 
@@ -406,8 +417,14 @@ footer {
 }
 
 .ceroImagen {
-    background-image: url("../img/webp_images/index/Recurso 19LOGO FINAL.webp");
     /* background-color: wheat; */
+    background-image: url("../img/webp_images/index/Recurso 19LOGO FINAL.webp");
+    background-color: var(--color-oscuro);
+}
+
+.ceroImagen.dark {
+    /* background-image: url("../img/webp_images/index/Recurso 19LOGO FINAL.webp"); */
+    background-color: var(--color-oscuro);
 }
 
 .primeraImagen {
@@ -421,12 +438,12 @@ footer {
 .quintaImagen {
     /* background-color: wheat; */
     /* background-color: #F4F4DE; */
-    background-color: #0e1111;
+    background-color: var(--color-oscuro);
 }
 
 .sextaImagen {
     /* z-index: 1000000; */
-    background-color: #0e1111;
+    background-color: var(--color-oscuro);
     /* background-color: #ac26cd; */
     display: flex;
     justify-content: center;
@@ -434,13 +451,13 @@ footer {
 }
 
 .custom-text {
+    color: #fff;
     font-size: 3vh;
     letter-spacing: 1vh;
     margin-top: -10px;
     pointer-events: none;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
-    pointer-events: none;
     transition: width 1s, height 1s;
     font-family: "Alte Haas Grotesk", Arial, Helvetica, sans-serif;
     z-index: 10;
@@ -717,7 +734,7 @@ footer {
 }
 
 .headerAbout {
-    background-color: #000204;
+    background-color: var(--color-oscuro);
     color: var(--color-fondo);
     /* text-align: center; */
     padding: 20px 0;
@@ -808,11 +825,22 @@ footer {
     justify-content: space-between; /* Espacio entre las imágenes */
 }
 
+.imageContainerIntro {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las imágenes */
+}
+
 .foto3 img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.5s ease, filter 0.5s ease;
+    width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+}
+
+/* Clearfix para manejar el float y evitar problemas de diseño */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .foto1:hover .overlay-text,
@@ -872,22 +900,6 @@ footer {
 
 #preloader.hide {
     display: none;
-}
-
-#granulado-container {
-    /* por encima de todo */
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}
-
-section {
-    height: 100vh;
-    /* background: #0e1111; */
-    color: var(--color-texto);
-    display: grid;
-    place-items: center;
 }
 
 .textContainerProyecto1 {
@@ -1134,6 +1146,10 @@ textarea {
     transition: border-bottom 0.3s ease;
 }
 
+textarea {
+    resize: none; /* Evita que el usuario pueda cambiar el tamaño */
+}
+
 input[type="submit"] {
     background-color: red; /* Rojo oscuro */
     color: #fff; /* Texto blanco */
@@ -1162,10 +1178,10 @@ textarea:hover {
 }
 
 .container-Art img {
-    width: calc(20% - 10px); /* El 50% del ancho de su contenedor menos el margen */
+    width: calc(20% - 10px);
     height: 39vh;
-    object-fit: cover; /* Recortar y hacer zoom para que la imagen sea cuadrada */
-    margin-bottom: 10px; /* Margen inferior para separar las filas */
+    object-fit: cover;
+    margin-bottom: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -1176,6 +1192,20 @@ textarea:hover {
 .titulo2Texto {
     font-family: 'ClashDisplay-Bold';
     font-size: 8vh;
+    color: var(--color-texto);
+    text-align: center;
+}
+
+.titulo2TextoZero {
+    font-family: 'Cralika';
+    font-size: 8vh;
+    text-align: center;
+}
+
+.titulo2TextoSki {
+    color: var(--color-texto);
+    font-family: 'Akira Expanded', sans-serif;
+    font-size: 6vh;
     text-align: center;
 }
 
@@ -1189,10 +1219,9 @@ textarea:hover {
 .textoGrande {
     font-family: 'ClashDisplay-Semibold';
     font-size: 3vh;
-    /* text-align: center; */
 }
 
-.textoMid p{
+.textoMid p {
     font-family: 'ClashDisplay-Regular';
     font-size: 2.5vh;
 }
@@ -1201,23 +1230,48 @@ textarea:hover {
     font-family: 'ClashDisplay-Bold';
     font-size: 2.5vh;
 }
+.negritaIntro {
+    font-family: 'ClashDisplay-Bold';
+}
 
 .tableIntro {
-    width: 50%;
+    width: 60%;
     border-collapse: collapse;
-    /* centrame la tabla */
-    margin-left: 60vh;
-    
+    margin-left: 40vh;    
 }
 
 .tableIntro td {
-    /* padding: 20px; */
     /* border: 1px solid red; */
-    width: 50%;
+    width: 60%;
+    padding-top: 20px;
+}
+
+.tableZero {
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-left: 40vh;     */
+}
+
+.tableZero td {
+    /* border: 1px solid red; */
+    width: 80%;
     padding-top: 20px;
 }
 
 .textTableIntro {
     margin: 0;
     padding: 0;
+}
+
+.tableIntro1 td {
+    border: 1px solid red;
+    width: 10%;
+}
+
+.centered-text2 {
+    color: var(--color-texto);
+} 
+
+.rightContent h2 {
+    color: var(--color-texto);
 }

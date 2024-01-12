@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Cralika';
+    src: url('../fonts/Cralika.woff2') format('woff2'),
+         url('../fonts/Cralika.woff') format('woff'),
+         url('../fonts/Cralika.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+  
