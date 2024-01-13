@@ -14,6 +14,7 @@ body.dark {
     --color-oscuro: #0e1111;
     --color-texto: #F4F4DE;
     --color-pieFoto: #e3e3d0;
+    --color-formulario: #1c1c1c;
     --color-oscuro-LowOP: rgba(14, 17, 17, 0.8); /* #0e1111 con 50% de opacidad */
 }
 
@@ -22,8 +23,8 @@ body.dark {
     --color-texto: #0e1111;
     --color-oscuro: #F4F4DE;
     --color-pieFoto: #0e1111;
+    --color-formulario: #dadac2;
     --color-oscuro-LowOP: rgba(244, 244, 222, 0.8); /* #F4F4DE con 50% de opacidad */
-
 }
 
 * {
@@ -100,7 +101,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--color-texto);
+    color: #F4F4DE;
     font-size: 2.5vh;
     transition: color 0.3s, font-size 0.3s;
 }
@@ -1139,7 +1140,7 @@ input,
 textarea {
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #1c1c1c; /* Fondo oscuro */
+    background-color: var(--color-formulario); /* Fondo oscuro */
     border: none;
     border-bottom: 2px solid red; /* Línea inferior roja */
     color: #fff; /* Texto blanco */
