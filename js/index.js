@@ -1,9 +1,37 @@
-let toggle = document.getElementById("mode");
+// Función para aplicar el tema oscuro
+function applyDarkMode() {
+    document.body.classList.add('dark');
+    ceroImagen.classList.add('dark');
+}
 
-toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    console.log("click");
-})
+// Función para aplicar el tema claro
+function applyLightMode() {
+    document.body.classList.remove('dark');
+    ceroImagen.classList.remove('dark');
+}
+
+// Verifica si el sistema operativo o el navegador tiene configurado el tema oscuro
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+const ceroImagen = document.querySelector('.ceroImagen');
+// Aplica el tema oscuro si es preferido por el sistema al cargar la página
+if (prefersDarkMode.matches) {
+    applyDarkMode();
+}
+
+// Agrega el evento de cambio de tema cuando cambia la preferencia de color del sistema
+prefersDarkMode.addEventListener('change', (event) => {
+    if (event.matches) {
+        applyDarkMode();
+    } else {
+        applyLightMode();
+    }
+});
+
+// const toggleDarkModeButton = document.getElementById("mode");
+
+// toggle.addEventListener('change', () => {
+//     document.body.classList.toggle('dark');
+// });
 
 function playVideo(video) {
     video.currentTime = 0;
@@ -92,7 +120,7 @@ function formIsValid() {
     $("#miFormulario :input[required]").each(function() {
         if ($(this).val() === "") {
             isValid = false;
-            return false; // Salir del bucle si un campo está vacío
+            return false;
         }
     });
 
@@ -196,12 +224,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Listener para detectar cambios en el zoom
     window.addEventListener("resize", () => {
         adjustCursorSize();
     });
 
-    // Llamada inicial para ajustar el tamaño del cursor
     adjustCursorSize();
 
     function adjustCursorSize() {
@@ -212,22 +238,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Establece el tamaño del cursor utilizando una unidad relativa
         innerCursor.style.width = `${cursorSize / zoomLevel}vw`;
         innerCursor.style.height = `${cursorSize / zoomLevel}vw`;
-    }
-
-    // Función para obtener el color del fondo en las coordenadas dadas
-    function getPixelColor(x, y) {
-        var pixelData = document.createElement('canvas').getContext('2d').getImageData(x, y, 1, 1).data;
-        return rgbToHex(pixelData[0], pixelData[1], pixelData[2]);
-    }
-
-    // Función para invertir el color hexadecimal
-    function invertColor(hex) {
-        return (0xFFFFFF ^ parseInt(hex, 16)).toString(16).padStart(6, '0');
-    }
-
-    // Función para convertir RGB a hexadecimal
-    function rgbToHex(r, g, b) {
-        return ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
     }
 
     function isCursorOverElement(event, element) {
@@ -267,16 +277,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
-    // Llama a la función cuando se desplaza o carga la página
     window.addEventListener("scroll", updateActiveMenuItem);
     window.addEventListener("load", updateActiveMenuItem);
     
-
-    window.addEventListener("scroll", updateActiveMenuItem);
-    window.addEventListener("load", updateActiveMenuItem);
-
-    // Para solucionar el problema de Contacto
-    // Agregamos un evento al hacer clic en el enlace para desplazar suavemente a la sección
     menuItems.forEach(function (menuItem) {
         menuItem.addEventListener("click", function (event) {
             event.preventDefault();
