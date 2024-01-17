@@ -1274,7 +1274,7 @@ textarea:hover {
 }
 
 .tableIntro td {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 60%;
     padding-top: 20px;
 }
@@ -1286,7 +1286,7 @@ textarea:hover {
 }
 
 .tableZero td {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 77%;
     padding-top: 20px;
 }
