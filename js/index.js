@@ -29,7 +29,7 @@ prefersDarkMode.addEventListener('change', (event) => {
 
 // const toggleDarkModeButton = document.getElementById("mode");
 
-// toggle.addEventListener('change', () => {
+// toggleDarkModeButton.addEventListener('click', () => {
 //     document.body.classList.toggle('dark');
 // });
 
@@ -43,15 +43,8 @@ function onSubmit(token) {
 }
 
 window.addEventListener(("scroll"),()=>{
-    document.querySelector("#Home h1").style.marginTop = `${window.scrollY * 1.5}px`
-    document.querySelector("#Mountain1").style.marginBottom = `${106 - window.scrollY}px`
-    document.querySelector("#leftCloud").style.marginLeft = `-${window.scrollY}px`
-    document.querySelector("#leftCloud1").style.marginLeft = `-${window.scrollY}px`
-    document.querySelector("#leftCloud2").style.marginLeft = `-${window.scrollY}px`
-    document.querySelector("#mainCloud").style.marginTop = `-${window.scrollY}px`
-    document.querySelector("#mainCloud1").style.marginTop = `-${window.scrollY}px`
-    document.querySelector("#rightCloud").style.marginRight = `-${window.scrollY}px`
-    document.querySelector("#rightCloud1").style.marginRight = `-${window.scrollY}px`
+    // document.querySelector("#midLogo").style.marginTop = `${window.scrollY * 1.5}px`
+    // document.querySelector("#rightCloud1").style.marginRight = `-${window.scrollY}px`
 })
 
 document.querySelectorAll('.container-Art img').forEach(img => {
@@ -293,3 +286,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     var videos = [
+//         "../media/proximamaente 3.mp4",
+//         "../media/teaser intro.mp4",
+//         "../media/teaser pagina web.mp4"
+//     ];
+
+//     var randomIndex = Math.floor(Math.random() * videos.length);
+
+//     // Obtén el elemento de video por su ID
+//     var videoElement = document.getElementById("videoElement");
+
+//     // Rellena la fuente del video
+//     videoElement.querySelector("source").setAttribute("src", videos[randomIndex]);
+
+//     // Recarga el video para que cargue la nueva fuente
+//     videoElement.load();
+// });

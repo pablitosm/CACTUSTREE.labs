@@ -38,7 +38,7 @@ body.dark {
 }
 
 * {
-    font-family: 'Alte Haas Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
@@ -302,6 +302,7 @@ p {
 }
 
 #video-fondo {
+    color: wheat;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -431,14 +432,14 @@ p {
     height: 100vh;
 }
 
-.ceroImagen {
+/* .ceroImagen {
     background-image: url("../img/webp_images/index/momento1.webp");
 
 }
 
 .ceroImagen.dark {
     background-image: url("../img/webp_images/index/momento2.webp");
-}
+} */
 
 .primeraImagen {
     background-image: url("../img/fondo.jpeg");
@@ -449,13 +450,13 @@ p {
 }
 
 .quintaImagen {
+    width: 100%;
     /* background-color: wheat; */
     /* background-color: #F4F4DE; */
     background-color: var(--color-oscuro);
 }
 
 .sextaImagen {
-    /* z-index: 1000000; */
     background-color: var(--color-oscuro);
     /* background-color: #ac26cd; */
     display: flex;
@@ -752,6 +753,10 @@ p {
     #rightCloud {
         display: none;
     }
+
+    .logoMid {
+        width: 80% !important;
+    }
 }
 
 .headerAbout {
@@ -801,6 +806,10 @@ p {
     top: 0;
     left: 0;
     opacity: 0;
+}
+
+.imagen1-hover {
+    width: 100%;
 }
 
 .foto:hover .overlay-text {
@@ -856,7 +865,7 @@ p {
     display: table;
 }
 
-.foto1:hover .overlay-text,
+/* .foto1:hover .overlay-text,
 .foto2:hover .overlay-text {
     opacity: 1;
 }
@@ -868,7 +877,6 @@ p {
 
 
 .foto2:hover img {
-    /* transform: scale(1.05); */
     filter: brightness(70%);
 }
 
@@ -876,7 +884,7 @@ p {
 .foto2:not(:hover) img {
     transform: scale(1);
     filter: brightness(100%);
-}
+} */
 
 .overlay-text {
     position: absolute;
@@ -960,7 +968,8 @@ p {
 
 #Home img {
     position: absolute;
-    bottom: 0px;
+    z-index: 2;
+
 }
 
 #Mountain1 {
@@ -1033,6 +1042,10 @@ p {
     width: 95%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+}
+
+.logoMid {
+    width: 25vw;
 }
 
 .wrapper{
@@ -1166,7 +1179,7 @@ textarea {
 input[type="submit"] {
     background-color: red; /* Rojo oscuro */
     color: #fff; /* Texto blanco */
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: background-color 0.3s ease;
 }
 
@@ -1174,8 +1187,8 @@ input, textarea {
     margin: 1.3vh 0; /* Ajusta este valor según sea necesario */
 }
 
-input[type="button"]:hover {
-    background-color: #6b0000; /* Cambio de color al pasar el ratón */
+input[type="submit"]:hover {
+    background-color: #ca0000; /* Cambio de color al pasar el ratón */
 }
 
 input:hover,
@@ -1307,4 +1320,15 @@ textarea:hover {
 
 .rightContent h2 {
     color: var(--color-texto);
+}
+
+.ceroVideo {
+    width: 100%;
+    z-index: -1;
+}
+
+.cerovideo video {
+    position: absolute; /* or absolute, depending on your layout */
+    width: 10%;
+    z-index: -1;
 }

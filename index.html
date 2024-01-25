@@ -13,6 +13,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="200x200">
+	
+	<!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="https://web3forms.com/client/script.js" async defer></script>
 
@@ -34,6 +36,7 @@
 					<li><a href="#projects">PROJECTS</a></li>
 					<li><a href="#art">ART</a></li>
 					<li><a href="#contact">CONTACT</a></li>
+					<!-- <li><input type="button" id="mode"></input></li> -->
 				</ul>
 			</nav>
 		</header>
@@ -41,36 +44,34 @@
 
 	<div class="ceroImagen">
 		<section id="Home">
-			<h1 class="textLogo">CACTUSTREE.labs&#8482;</h1>
-			<img src="./img/parallax/Recurso 16LOGO FINAL.png" id="leftCloud" alt="">
-			<img src="./img/parallax/Recurso 17LOGO FINAL.png" id="leftCloud1" alt="">
-			<img src="./img/parallax/Recurso 18LOGO FINAL.png" id="leftCloud2" alt="">
-			<img src="./img/parallax/Recurso 3LOGO FINAL1.png" id="rightCloud" alt="">
-			<img src="./img/parallax/Recurso 14LOGO FINAL.png" id="mainCloud" alt="">
-			<img src="./img/parallax/Recurso 15LOGO FINAL.png" id="mainCloud1" alt="">
-			<img src="./img/parallax/Recurso 9LOGO FINAL.png" id="rightCloud1" alt="">
+
+			<div class="ceroVideo">
+				<video id="videoElement" autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
+					<source src="./media/Web Bucle 2 (1).mov" type="video/mp4"> 
+				</video>
+			</div>
+			
+			<!-- <img src="./img/parallax/Recurso 9LOGO FINAL.png" id="rightCloud1" alt=""> -->
+			<!-- <img class="logoMid" src="./img/principal/Recurso 32LOGO FINAL.png" id="midLogo" alt=""> -->
 			<img src="" id="Mountain1" alt="">
 		</section>
-		<!-- <div class="centered-text"> -->
-			<!-- <img class="logoCactusTree" src="./img/principal/Recurso 36LOGO FINAL.png" alt=""> -->
-			<!-- <h1 class="textLogo">CACTUSTREE.labs&#8482;</h1> -->
-			<!-- <h2 class="mail">info@cactustreelabs.com</h2> -->
-		<!-- </div> -->
 	</div>
 		
 	<div class="container">
 		<div class="navbar">
 			<ul>
-				<li><a href="#projects" data-section-name="PROJECTS"></a><div class="section-name">Proyectos</div></li>
-				<li><a href="#art" data-section-name="ART"></a><div class="section-name">Arte</div></li>
-				<li><a href="#contact" data-section-name="CONTACT"></a><div class="section-name">Contacto</div></li>
+				<li><a href="#projects" data-section-name="PROJECTS"></a><div class="section-name">Projects</div></li>
+				<li><a href="#art" data-section-name="ART"></a><div class="section-name">Art</div></li>
+				<li><a href="#contact" data-section-name="CONTACT"></a><div class="section-name">Contact</div></li>
 			</ul>
 		</div>
 	</div>
 
 	<!-- DIV PROYECTOS -->
 	<div class="projects terceraImagen" id="projects">
+
 		<div class="fila" id="contenido3">
+
 			<div class="foto" id="projects1">
 				<a href="./html/proyectos/intro">
 					<div class="imagen1">
@@ -83,6 +84,7 @@
 					</div>
 				</a>
 			</div>
+
 			<div class="foto" id="projects2">
 				<a href="./html/proyectos/zero">
 					<div class="imagen1">
@@ -95,6 +97,7 @@
 					</div>
 				</a>
 			</div>
+
 			<div class="foto" id="projects3">
 				<a href="./html/proyectos/ski">
 					<div class="imagen1">
@@ -107,6 +110,7 @@
 					</div>
 				</a>
 			</div>
+
 		</div>
 	</div>
 	
@@ -122,10 +126,6 @@
 			</div>
 		</a>
 	</div>
-	
-	<!-- <div class="modal" id="modal">
-		<img src="" alt="" id="modalImg">
-	</div> -->
 
 	<!-- DIV CONTACTO -->
 	<div class="contact sextaImagen" id="contact">
@@ -135,42 +135,42 @@
 				<td class="leftContent">
 					<div class="centered-text2">
 						<h2 class="aboutMe">About me</h2>
-						<p>Mi nombre es <b>Arturo Martín</b>, soy un chico de <b>21 años</b> al que le apasiona
-							el <b>mundo audiovisual</b>, desde pequeño he tenido una cámara en las manos,
-							me gradué de la <b>escuela de producciones audiovisuales más importante de Aragón</b>,
-							al acabar fui a <b>Francia a trabajar</b> una temporada en una productora.
+						<p>My name is <b>Arturo Martín</b>, I am a <b>21-year-old</b> guy who is passionate
+							about the <b>audiovisual world</b>. Since I was a child, I've had a camera in my hands.
+							I graduated from the <b>most important audiovisual production school in Aragon</b>.
+							After graduating, I went to <b>France to work</b> for a while at a production company.
 						</p>
-						<p>Ahora ya estoy en casa y busco la manera de <b>empezar en este negocio por mi cuenta</b>,
-							y estoy en <b>busca de nuevos clientes</b> que quieran <b>evolucionar sus negocios</b> a través de
-							las imágenes y los videos.
+						<p>Now that I'm back home, I'm looking for a way to <b>start my own business</b>,
+							and I'm actively seeking <b>new clients</b> who want to <b>enhance their businesses</b> through
+							images and videos.
 						</p>
-						<p>Por eso, he creado <b>CACTUSTREE.labs&#8482;</b>, para mí el audiovisual
-						es una manera más de expresarme y por eso, intento que
-						todos mis clientes estén satisfechos con el trabajo que realizo</p><br>
-						<p>Teléfono: <b>+34 692 94 81 26</b></p>
+						<p>That's why I've created <b>CACTUSTREE.labs&#8482;</b>. For me, audiovisual production
+							is another way to express myself, and I strive to ensure
+							that all my clients are satisfied with the work I do.
+						</p><br>
+						<p>Phone Number: <b>+34 692 94 81 26</b></p>
 						<p>Email: <b>info@cactustreelabs.com</b></p>
 					</div>
-					<!-- <img class="movileVersion" src="./img/principal/Recurso 36LOGO FINAL.png" alt="">
-					<img class="imageBlanca movileVersion" src="./img/principal/Recurso 37LOGO FINAL.png" alt=""> -->
+
 				</td>
 				<td class="rightContent">
-					<h2>Contacto</h2>
+					<h2>Contact</h2>
 					<form id="miFormulario" method="POST">
 						<input type="hidden" name="access_key" value="0761ef7d-af07-4a95-aff0-4ba8b5473cc7">
 						<!-- <input type="hidden" name="access_key" value="866e4256-a00f-4cad-a2fe-31b3cdfb045a"> -->
 						<input type="hidden" name="subject" value="Formulario de contacto">
 						<input type="hidden" name="from_name" value="cactustree.labs">
 						<!-- <input type="hidden" name="redirect" value="https://web3forms.com/success">						 -->
-						<input type="text" name="nombre" id="nombre" placeholder="Nombre" autocomplete="given-name" required>
+						<input type="text" name="nombre" id="nombre" placeholder="Name" autocomplete="given-name" required>
 						<label for="email"></label>
 						<input type="email" name="email" id="email" placeholder="Email" autocomplete="email" required>
 						<label for="mensaje"></label>
-						<textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
+						<textarea name="mensaje" id="mensaje" placeholder="Message" required></textarea>
 						<!-- <div class="g-recaptcha" data-sitekey="6Lfd_UMpAAAAAOioJNPAqLzXDLzSpvpJq0R4ablH"></div> -->
 						<div class="h-captcha" data-captcha="true"></div>
 						<!-- <input type="button" value="Enviar" onclick="enviarFormulario()">  -->
-						<input type="submit" value="Enviar" onclick="enviarFormulario()">	
-						<p id="mensajeExito" style="display: none; color: green;">¡Formulario enviado con éxito!</p>
+						<input type="submit" value="Submit" onclick="enviarFormulario()">	
+						<p id="mensajeExito" style="display: none; color: green;">Form successfully submitted!</p>
 					</form>
 				</td>
 			</tr>
@@ -185,13 +185,8 @@
 		<a href="https://www.instagram.com/cactustree.labs/" target="_blank"><img class="imageFooter" src="./img/about/foto_copy.png" alt=""></a>
 	</footer>	
 
-	<!-- <script src="./js/index.js"></script>  -->
 	<script src="./js/index.js"></script> 
 	<script src="./js/grained.js"></script>
 	
-	<script>    
-		
-	</script>
-	<!-- </section> -->
 </body>
 </html>
