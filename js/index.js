@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener("DOMContentLoaded", function () {
 
     let innerCursor = document.querySelector(".inner-cursor");
+    let outerCursor = document.querySelector(".outer-cursor");
     let textElement = document.querySelector(".custom-text");
 
     let proyectoUno = document.getElementById("projects1");
@@ -170,6 +171,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         innerCursor.style.left = `${x}px`;
         innerCursor.style.top = `${y}px`;
+    
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("mouseover", function() {
+                outerCursor.style.display = "block";
+            });
+    
+            link.addEventListener("mouseout", function() {
+                outerCursor.style.display = "none";
+            });
+        });
+    
+        // Actualizar la posición del outerCursor continuamente
+        if (outerCursor.style.display === "block") {
+            setTimeout(() => {
+                outerCursor.style.left = `${x}px`;
+                outerCursor.style.top = `${y}px`;
+            }, 200);
+        }
 
         // Verificar si el cursor está sobre el área de "terceraImagen"
         if (isCursorOverElement(e, proyectoUno)) {

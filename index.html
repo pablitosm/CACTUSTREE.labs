@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <link href="https://fonts.cdnfonts.com/css/nt-wagner" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/glossy-personal-use" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<link href="https://fonts.cdnfonts.com/css/alte-haas-grotesk" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <link rel="icon" href="./img/favicon.png" type="image/png" sizes="200x200">
 	
-	<!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<script src="https://web3forms.com/client/script.js" async defer></script>
 
     <title>CACTUSTREE.labs</title>
 </head>
 <body class="bodyIndex" id="body granulado-container">
-	<!-- <section id="granulado-container"> -->
 	<div id="preloader">
 		<video autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
 			<source src="./media/ANIMACION.mp4" type="video/mp4">
@@ -36,7 +38,6 @@
 					<li><a href="#projects">PROJECTS</a></li>
 					<li><a href="#art">ART</a></li>
 					<li><a href="#contact">CONTACT</a></li>
-					<!-- <li><input type="button" id="mode"></input></li> -->
 				</ul>
 			</nav>
 		</header>
@@ -46,13 +47,11 @@
 		<section id="Home">
 
 			<div class="ceroVideo">
-				<video id="videoElement" autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;">
+				<video id="videoElement" autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;" poster="./img_webp/index/poster-intro.webp">
 					<source src="./media/Web Bucle 2 (1).mov" type="video/mp4"> 
 				</video>
 			</div>
 			
-			<!-- <img src="./img/parallax/Recurso 9LOGO FINAL.png" id="rightCloud1" alt=""> -->
-			<!-- <img class="logoMid" src="./img/principal/Recurso 32LOGO FINAL.png" id="midLogo" alt=""> -->
 			<img src="" id="Mountain1" alt="">
 		</section>
 	</div>
@@ -130,9 +129,10 @@
 	<!-- DIV CONTACTO -->
 	<div class="contact sextaImagen" id="contact">
 
-		<table class="tableIndex">
+		<table class="tableIndex responsive-table">
 			<tr>
 				<td class="leftContent">
+
 					<div class="centered-text2">
 						<h2 class="aboutMe">About me</h2>
 						<p>My name is <b>Arturo Martín</b>, I am a <b>21-year-old</b> guy who is passionate
@@ -160,17 +160,14 @@
 						<!-- <input type="hidden" name="access_key" value="866e4256-a00f-4cad-a2fe-31b3cdfb045a"> -->
 						<input type="hidden" name="subject" value="Formulario de contacto">
 						<input type="hidden" name="from_name" value="cactustree.labs">
-						<!-- <input type="hidden" name="redirect" value="https://web3forms.com/success">						 -->
 						<input type="text" name="nombre" id="nombre" placeholder="Name" autocomplete="given-name" required>
 						<label for="email"></label>
 						<input type="email" name="email" id="email" placeholder="Email" autocomplete="email" required>
 						<label for="mensaje"></label>
 						<textarea name="mensaje" id="mensaje" placeholder="Message" required></textarea>
-						<!-- <div class="g-recaptcha" data-sitekey="6Lfd_UMpAAAAAOioJNPAqLzXDLzSpvpJq0R4ablH"></div> -->
 						<div class="h-captcha" data-captcha="true"></div>
-						<!-- <input type="button" value="Enviar" onclick="enviarFormulario()">  -->
 						<input type="submit" value="Submit" onclick="enviarFormulario()">	
-						<p id="mensajeExito" style="display: none; color: green;">Form successfully submitted!</p>
+						<p id="mensajeExito" style="display: none; color: rgb(0, 157, 0);">Form successfully submitted!</p>
 					</form>
 				</td>
 			</tr>
@@ -178,11 +175,52 @@
 	</div>
 
     <div class="inner-cursor"></div>
+	<div class="outer-cursor"></div>
     <div class="custom-text"></div>
 
-	<footer>
-		<p>CACTUSTREE.labs</p>
-		<a href="https://www.instagram.com/cactustree.labs/" target="_blank"><img class="imageFooter" src="./img/about/foto_copy.png" alt=""></a>
+	<footer class="footerIndex">
+		<table class="table-footer-index">
+			<thead>
+				<tr>
+					<th><p>CACTUSTREE.labs&#8482;</p></th>
+					 <th style="text-align: right;"><!--<a href="https://www.instagram.com/cactustree.labs/" target="_blank"><img class="imageFooter" src="./img/about/foto_copy.png" alt=""></a> -->
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="2" style="height: 25px;"></td>
+				</tr>
+				<tr>
+					<td style="font-weight: bold;">USEFULL LINKS</td>
+					<td class="rightAlign-footer-index" style="font-weight: bold;">CONTACT</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="height: 15px;"></td>
+				</tr>
+				<tr>
+					<td><a class="link-footer-index" href="#projects">PROJECTS</a></td>
+					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://www.instagram.com/cactustree.labs/" target="_blank"><span style="margin-right: 10px;">INSTAGRAM</span><img class="imageFooter" src="./img/about/foto_copy.png" alt=""></a></td>
+				</tr>
+				<tr>
+					<td><a class="link-footer-index" href="#projects">ART</a></td>
+					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://www.threads.net/@cactustree.labs" target="_blank"><span style="margin-right: 10px;">THREADS</span></a><img class="imageFooter" src="./img/threads-logo.png" alt=""></td>
+
+				</tr>
+				<tr>
+					<td><a class="link-footer-index" href="#projects">CONTACT</a></td>
+					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://vimeo.com/user201951037" target="_blank"><span style="margin-right: 10px;">VIMEO</span><img class="imageFooter" src="./img/vimeo-logo.png" alt=""></a></td>
+				</tr>
+				<tr>
+					<td><a class="link-footer-index" href="#projects">PHOTOGRAPHY</a></td>
+					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://www.youtube.com/@whoiskolo" target="_blank"><span style="margin-right: 10px;">YOUTUBE</span><img class="imageFooter" src="./img/youtube-logo.png" alt=""></a></td>
+
+				</tr>
+				<tr>
+					<td colspan="2" style="height: 15px;"></td>
+				</tr>
+			</tbody>
+		</table>
 	</footer>	
 
 	<script src="./js/index.js"></script> 

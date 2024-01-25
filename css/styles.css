@@ -80,6 +80,7 @@ hr {
 }
 
 .imageFooter {
+    vertical-align: bottom;
     width: 2.8vh;
     height: 2.8vh;
 }
@@ -228,8 +229,10 @@ nav ul li a:hover {
 }
 
 footer {
+    /* sombra exterior superior */
+    box-shadow: 0px -5px 20px 0px rgba(255,0,0,0.25);
     width: 100%;
-    height: 5vh;
+    height: auto;
     background-color: var(--color-fondo);
     color: var(--color-texto);
     text-align: left;
@@ -243,6 +246,32 @@ footer {
 
 footer p {
     color: #F4F4DE;
+}
+
+.footerIndex {
+    /* hola */
+}
+
+.table-footer-index {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-footer-index td, .table-footer-index th {
+    /* border: 1px solid white;  */
+} 
+
+.link-footer-index, 
+.link-footer-index:hover,
+.link-footer-index:visited,
+.link-footer-index:active {
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.rightAlign-footer-index {
+    text-align: right;
+    align-content: right;
 }
 
 .footerLeft, 
@@ -351,14 +380,7 @@ p {
     pointer-events: none; /* Para que el texto no afecte la interactividad */
 }
 
-.outer-cursor {
-    margin-top: -10px;
-    border: 1px solid #fff;
-    mix-blend-mode: difference;
-    pointer-events: auto;
-    transition: 0.1s;
-    z-index: 10000;
-}
+
 
 .logo {
     height: 6vh;
@@ -458,11 +480,14 @@ p {
 
 .sextaImagen {
     background-color: var(--color-oscuro);
-    /* background-color: #ac26cd; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url("../img/fondo-imagen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 60vh; */
 }
+
+
 
 .custom-text {
     color: #fff;
@@ -487,6 +512,20 @@ p {
     mix-blend-mode: difference;
     pointer-events: none;
     z-index: 10000000000000000000 /* xdddddddddd  cambiar todos los index*/;
+}
+
+.outer-cursor {
+    display: none;
+    position: fixed;
+    left: 10px;
+    width: 20px; /* Hacer el outerCursor más grande */
+    height: 20px; /* Hacer el outerCursor más grande */
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff; /* Hacer el outerCursor un cuadrado hueco */
+    background-color: transparent; /* Hacer el outerCursor transparente */
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 10000000000000000000; /* Asegúrate de que el outerCursor esté por encima de otros elementos */
 }
 
 .projects,
@@ -687,15 +726,19 @@ p {
         width: 90% !important;
     }
 
-    table, tbody, tr, td {
-        margin: 0 !important;
-        padding: 0 !important;
+    .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td {
+
         width: 100% !important;
         display: block;
         box-sizing: border-box;
     }
 
     .tableIntro {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .tableZero {
         width: 100% !important;
         margin-left: 0 !important;
     }
@@ -741,6 +784,10 @@ p {
         object-fit: cover; /* Recortar y hacer zoom para que la imagen sea cuadrada */
         margin-bottom: 10px; /* Margen inferior para separar las filas */
         transition: transform 0.3s ease-in-out;
+    }
+
+    .responsive-text .textTableIntro {
+        font-size: 14px; /* Ajusta este valor según tus necesidades */
     }
 
     .hideFotoMovile {
@@ -1299,7 +1346,7 @@ textarea:hover {
 }
 
 .tableZero td {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     width: 77%;
     padding-top: 20px;
 }
@@ -1310,7 +1357,7 @@ textarea:hover {
 }
 
 .tableIntro1 td {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 10%;
 }
 
