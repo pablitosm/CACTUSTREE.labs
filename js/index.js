@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 textElement.style.top = `${y - offset}px`;
             }, 100);
         } else if (isCursorOverElement(e, proyectoDos)) {
+
             // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
             textElement.style.display = "block";
 
@@ -264,7 +265,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    
     var menuItems = document.querySelectorAll(".navbar a");
+    var menuDivs = document.querySelectorAll(".navbar div");
 
     function updateActiveMenuItem() {
         var windowHeight = window.innerHeight;
@@ -273,18 +276,40 @@ document.addEventListener("DOMContentLoaded", function () {
         menuItems.forEach(function (menuItem) {
             var targetId = menuItem.getAttribute("href").substring(1);
             var targetSection = document.getElementById(targetId);
-    
             var sectionTop = targetSection.offsetTop;
             var sectionBottom = sectionTop + targetSection.offsetHeight;
+    
+            // Selecciona el div 'section-name' dentro del elemento 'li' actual
+            var sectionName = menuItem.parentElement.querySelector('.section-name');
     
             if (sectionTop <= scrollPosition && sectionBottom > scrollPosition) {
                 // Agregar la clase 'active' al elemento del menú correspondiente
                 menuItem.parentElement.classList.add("active", "fadeIn");
-                menuItem.classList.add("active"); // Agregar la clase 'active' al enlace
+                menuItem.classList.add("active");
+    
+                if (targetId === 'projects') {
+                    menuItems.forEach(function (otherMenuItem) {
+                        menuItem.classList.remove("black");
+                        otherMenuItem.style.color = '#F4F4DE';
+                        otherMenuItem.style.borderColor = '#F4F4DE';
+                    });
+                    sectionName.style.color = '#F4F4DE'; // Cambia el color del texto aquí
+                }
+    
+                if (targetId === 'art' || targetId === 'contact') {
+                    menuItems.forEach(function (otherMenuItem) {
+                        menuItem.classList.add("black");
+                        otherMenuItem.style.color = 'var(--color-navbar)';
+                        otherMenuItem.style.borderColor = 'var(--color-navbar)';
+                    });
+                    sectionName.style.color = 'var(--color-navbar)'; // Cambia el color del texto aquí
+                }
+    
             } else {
-                // Remover la clase 'active' si la sección ya no está visible
                 menuItem.parentElement.classList.remove("active", "fadeIn");
-                menuItem.classList.remove("active"); // Remover la clase 'active' del enlace
+                menuItem.classList.remove("active");
+                menuItem.classList.remove("black");
+                sectionName.style.color = ''; // Restablece el color del texto aquí
             }
         });
     }

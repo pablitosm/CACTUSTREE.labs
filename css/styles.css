@@ -21,6 +21,7 @@ a {
 
 body.dark {
     --color-oscuro: #0e1111;
+    --color-navbar: #F4F4DE;
     --color-texto: #F4F4DE;
     --color-pieFoto: #e3e3d0;
     --color-formulario: #1c1c1c;
@@ -30,6 +31,7 @@ body.dark {
 :root {
     --color-fondo: #FF0000;
     --color-texto: #0e1111;
+    --color-navbar: #0e1111;
     /* --color-oscuro: #F4F4DE; */
     --color-oscuro: #fafaeb;
     --color-pieFoto: #0e1111;
@@ -133,7 +135,7 @@ nav ul li a:hover {
 }
 
 .bodyIndex {
-    background-color: #0e1111;
+    background-color: var(--color-oscuro);
     margin: 0;
     padding: 0;
     display: flex;
@@ -248,28 +250,31 @@ footer p {
     color: #F4F4DE;
 }
 
-.footerIndex {
-    /* hola */
-}
 
 .table-footer-index {
     width: 100%;
     border-collapse: collapse;
 }
 
-.table-footer-index td, .table-footer-index th {
-    /* border: 1px solid white;  */
-} 
+/* .table-footer-index td, .table-footer-index th {
+    border: 1px solid white; 
+}  */
 
 .link-footer-index, 
 .link-footer-index:hover,
 .link-footer-index:visited,
-.link-footer-index:active {
-    color: var(--color-texto);
+.link-footer-index:active
+{
+    color: #F4F4DE;
     text-decoration: none;
 }
 
+.white-footer-index {
+    color: #F4F4DE;
+}
+
 .rightAlign-footer-index {
+    color: #F4F4DE;
     text-align: right;
     align-content: right;
 }
@@ -479,8 +484,9 @@ p {
 }
 
 .sextaImagen {
+    width: 100%;
     background-color: var(--color-oscuro);
-    background-image: url("../img/fondo-imagen.png");
+    /* background-image: url("../img/fondo-imagen.png"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -572,9 +578,20 @@ p {
     position: relative;
 }
 
+.navbar a.black::after {
+    content: '';
+    background-color: var(--color-navbar);
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; 
+}
+
 .navbar a::after {
     content: '';
-    background-color: #F4F4DE;
+    background-color: #e3e3d0;
     position: absolute;
     bottom: 0;
     height: 0;
@@ -605,6 +622,11 @@ p {
 
 .navbar {
     position: fixed;
+}
+
+.section-name.dark {
+    color: red;
+    background-color: red;
 }
 
 .section-name {
@@ -780,7 +802,7 @@ p {
 
     .container-Art1 img {
         width: calc(50% - 10px) !important; /* El 50% del ancho de su contenedor menos el margen */
-        height: 39vh;
+        height: auto;
         object-fit: cover; /* Recortar y hacer zoom para que la imagen sea cuadrada */
         margin-bottom: 10px; /* Margen inferior para separar las filas */
         transition: transform 0.3s ease-in-out;
@@ -1346,7 +1368,7 @@ textarea:hover {
 }
 
 .tableZero td {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 77%;
     padding-top: 20px;
 }
