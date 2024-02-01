@@ -159,6 +159,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let proyectoDos = document.getElementById("projects2");
     let proyectoTres = document.getElementById("projects3");
 
+    let quintaImagen = document.getElementById("art");
+
     let momentoUno = document.getElementById("moment1");
     let momentoDos = document.getElementById("moment2");
     let momentoTres = document.getElementById("moment3");
@@ -231,7 +233,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 textElement.style.left = `${x}px`;
                 textElement.style.top = `${y - offset}px`;
             }, 100);
-        }  else {
+        } 
+        else if (isCursorOverElement(e, quintaImagen)) {
+            // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+            textElement.style.display = "block";
+
+            // Puedes cambiar el texto dependiendo de tus necesidades
+            textElement.innerText = "gallery";
+
+            // Ajustar la posición del texto con un retardo
+            setTimeout(() => {
+                const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+                textElement.style.left = `${x}px`;
+                textElement.style.top = `${y - offset}px`;
+            }, 100);
+        } else {
             // Si el cursor está fuera del área de "terceraImagen", ocultar el custom-text
             textElement.style.display = "none";
         }
