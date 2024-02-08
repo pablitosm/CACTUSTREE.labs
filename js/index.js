@@ -120,6 +120,18 @@ function formIsValid() {
     return isValid;
 }
 
+var preloaderElement = document.getElementById('preloader');
+var introShown = document.cookie.indexOf('introShown=true') !== -1;
+
+if (!introShown) {
+    preloaderElement.classList.remove('hide');
+    setTimeout(function() {
+        preloaderElement.classList.add('hide');
+        document.cookie = 'introShown=true';
+    }, 5000);
+} else {
+    preloaderElement.classList.add('no-animation');
+}
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -135,18 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
         grainSpeed: 10
     });
 
-    var loader = document.getElementById("preloader");
-    var introShown = document.cookie.indexOf('introShown=true') !== -1;
-
-    if (!introShown) {
-        loader.classList.remove('hide');
-        setTimeout(function() {
-            loader.classList.add('hide');
-            document.cookie = 'introShown=true';
-        }, 5000);
-    } else {
-        loader.classList.add('hide');
-    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -220,33 +220,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 textElement.style.left = `${x}px`;
                 textElement.style.top = `${y - offset}px`;
             }, 100);
-        } else if (isCursorOverElement(e, proyectoTres)) {
-            // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
-            textElement.style.display = "block";
+        // } else if (isCursorOverElement(e, proyectoTres)) {
+        //     // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+        //     textElement.style.display = "block";
 
-            // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "tebay";
+        //     // Puedes cambiar el texto dependiendo de tus necesidades
+        //     textElement.innerText = "tebay";
 
-            // Ajustar la posición del texto con un retardo
-            setTimeout(() => {
-                const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
-                textElement.style.left = `${x}px`;
-                textElement.style.top = `${y - offset}px`;
-            }, 100);
-        } 
-        else if (isCursorOverElement(e, quintaImagen)) {
-            // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
-            textElement.style.display = "block";
+        //     // Ajustar la posición del texto con un retardo
+        //     setTimeout(() => {
+        //         const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+        //         textElement.style.left = `${x}px`;
+        //         textElement.style.top = `${y - offset}px`;
+        //     }, 100);
+        
+        // else if (isCursorOverElement(e, quintaImagen)) {
+        //     // Si el cursor está dentro del área de "terceraImagen", mostrar el custom-text
+        //     textElement.style.display = "block";
 
-            // Puedes cambiar el texto dependiendo de tus necesidades
-            textElement.innerText = "gallery";
+        //     // Puedes cambiar el texto dependiendo de tus necesidades
+        //     textElement.innerText = "gallery";
 
-            // Ajustar la posición del texto con un retardo
-            setTimeout(() => {
-                const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
-                textElement.style.left = `${x}px`;
-                textElement.style.top = `${y - offset}px`;
-            }, 100);
+        //     // Ajustar la posición del texto con un retardo
+        //     setTimeout(() => {
+        //         const offset = 15; // Ajusta la distancia en píxeles por encima del cursor
+        //         textElement.style.left = `${x}px`;
+        //         textElement.style.top = `${y - offset}px`;
+        //     }, 100);
         } else {
             // Si el cursor está fuera del área de "terceraImagen", ocultar el custom-text
             textElement.style.display = "none";

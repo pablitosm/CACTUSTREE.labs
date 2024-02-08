@@ -105,3 +105,8 @@
        font-style: normal;
 }
 
+@font-face {
+  font-family: 'Futura Std Bold';
+  src: url('../fonts/Futura.otf') format('otf'),
+}
+

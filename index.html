@@ -33,13 +33,7 @@
 
 	<div id="contenido1" style="position: relative;">
 		<header style="position: absolute; top: 0; left: 0;">
-			<a href="https://cactustreelabs.com"><img class="logo" src="./img/principal/logo.png" alt=""></a>
-			<!-- <div class="circle">
-				<img src="./img/cactus-cremoso.png" alt="Your image" class="center-image">
-					<div class="text">
-						<p>GALLERY GALLERY GALLERY GALLERY</p>
-					</div>
-				</div> -->
+			<!-- <a href="https://cactustreelabs.com"><img class="logo" src="./img/principal/logo.png" alt=""></a> -->
 			<nav>
 				<ul>
 					<li><a href="#projects">PROJECTS</a></li>
@@ -47,14 +41,22 @@
 					<li><a href="#contact">CONTACT</a></li>
 				</ul>
 			</nav>
+			<a href="https://cactustreelabs.com">
+				<div class="circle">
+					<img src="./img/cactus-cremoso.png" alt="Your image" class="center-image">
+					<div class="text">
+						<p>CACTUSTREE.labs CACTUSTREE.labs</p>
+					</div>
+				</div>
+			</a>
 		</header>
 	</div>
 
 	<div class="ceroImagen">
 		<section id="Home">
-
+			<img class="logoMid" src="./img/principal/Recurso 32LOGO FINAL.png" id="midLogo" alt="">
 			<div class="ceroVideo">
-				<video id="videoElement" autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;" poster="./img_webp/index/poster-intro.webp">
+				<video id="videoElement" autoplay muted loop playsinline style="width: 100%; height: 100vh; object-fit: cover;" poster="./img_webp/index/Intro background.webp">
 					<source src="./media/web bucle sin logo.mov" type="video/mp4"> 
 				</video>
 			</div>
@@ -104,7 +106,7 @@
 				</a>
 			</div>
 
-			<div class="foto" id="projects3">
+			<!-- <div class="foto" id="projects3">
 				<a href="./html/proyectos/ski">
 					<div class="imagen1">
 						<img src="./img/webp_images/index/the ultimate backcountry ski lodge_2.4.2.webp" alt="">
@@ -115,7 +117,7 @@
 						</video>
 					</div>
 				</a>
-			</div>
+			</div> -->
 
 		</div>
 	</div>
@@ -123,13 +125,10 @@
 	<!-- DIV ARTE -->
 	<div class="art quintaImagen" id="art">
 
-		<a href="./html/photo.html">
-			<div class="circle">
-			<img src="./img/cactus-cremoso.png" alt="Your image" class="center-image">
-				<div class="text">
-					<p>GALLERY GALLERY GALLERY GALLERY</p>
-				</div>
-			</div>
+		<a class="photo-link-noStyle" href="./html/photo.html">
+			<div class="textContainerPhoto">
+				<h2 class="titulo2TextoPhotoIndex">art.gallery</h2>
+			</div> 
 		</a>
 
 
@@ -155,7 +154,7 @@
 				<td class="leftContent">
 
 					<div class="centered-text2">
-						<h2 class="aboutMe">About me</h2>
+						<h2 class="aboutMe">about me</h2>
 						<p>My name is <b>Arturo Martín</b>, I am a <b>21-year-old</b> guy who is passionate
 							about the <b>audiovisual world</b>. Since I was a child, I've had a camera in my hands.
 							I graduated from the <b>most important audiovisual production school in Aragon</b>.
@@ -175,7 +174,7 @@
 
 				</td>
 				<td class="rightContent">
-					<h2>Contact</h2>
+					<h2>contact</h2>
 					<form id="miFormulario" method="POST">
 						<input type="hidden" name="access_key" value="0761ef7d-af07-4a95-aff0-4ba8b5473cc7">
 						<!-- <input type="hidden" name="access_key" value="866e4256-a00f-4cad-a2fe-31b3cdfb045a"> -->
@@ -204,6 +203,7 @@
 			<thead>
 				<tr>
 					<th><p>CACTUSTREE.labs&#8482;</p></th>
+					
 					 <th style="text-align: right;"><!--<a href="https://www.instagram.com/cactustree.labs/" target="_blank"><img class="imageFooter" src="./img/about/foto_copy.png" alt=""></a> -->
 					</th>
 				</tr>
@@ -224,16 +224,16 @@
 					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://www.instagram.com/cactustree.labs/" target="_blank"><span style="margin-right: 10px;">INSTAGRAM</span><img class="imageFooter" src="./img/about/foto_copy.png" alt=""></a></td>
 				</tr>
 				<tr>
-					<td><a class="link-footer-index" href="#projects">ART</a></td>
+					<td><a class="link-footer-index" href="#art">ART</a></td>
 					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://www.threads.net/@cactustree.labs" target="_blank"><span style="margin-right: 10px;">THREADS</span></a><img class="imageFooter" src="./img/threads-logo.png" alt=""></td>
 
 				</tr>
 				<tr>
-					<td><a class="link-footer-index" href="#projects">CONTACT</a></td>
+					<td><a class="link-footer-index" href="#contact">CONTACT</a></td>
 					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://vimeo.com/user201951037" target="_blank"><span style="margin-right: 10px;">VIMEO</span><img class="imageFooter" src="./img/vimeo-logo.png" alt=""></a></td>
 				</tr>
 				<tr>
-					<td><a class="link-footer-index" href="#projects">PHOTOGRAPHY</a></td>
+					<td><a class="link-footer-index" href="./html/photo.html">PHOTOGRAPHY</a></td>
 					<td class="rightAlign-footer-index"><a class="link-footer-index" href="https://www.youtube.com/@whoiskolo" target="_blank"><span style="margin-right: 10px;">YOUTUBE</span><img class="imageFooter" src="./img/youtube-logo.png" alt=""></a></td>
 
 				</tr>
